@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-25T16:53:07.953Z</updated>
+    <updated>2021-08-25T16:54:49.860Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -40,14 +40,15 @@
         <id>https://92rw.github.io/post/about/</id>
         <link href="https://92rw.github.io/post/about/">
         </link>
-        <updated>2021-08-25T09:00:00.000Z</updated>
+        <updated>2021-08-25T08:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
 <p>原本只是想学一下markdown怎么写，没想到Github也能托管网址，于是开始尝试这种模式</p>
+<p>此网站根据Gridea创建，采用nexT主题，感谢诸多程序员大佬们的分享。</p>
 <h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>空闲时间不够充裕的社畜</p>
+<p>空闲时间不够充裕的社畜，从事和代码无关的职业</p>
 <h2 id="个人经历">⛹ 个人经历</h2>
 <p>曾经多次想学习代码，却又只是了解皮毛。被各种算法劝退</p>
 <h2 id="以后可能会发的内容">📬 以后可能会发的内容</h2>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-25T17:55:20.632Z</updated>
+    <updated>2021-08-25T18:08:51.178Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -10,21 +10,6 @@
     <logo>https://92rw.github.io/images/avatar.png</logo>
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
-    <entry>
-        <title type="html"><![CDATA[个人收集到的麻将教程]]></title>
-        <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
-        <link href="https://92rw.github.io/post/Mahjong-Tutorials/">
-        </link>
-        <updated>2021-08-25T16:35:24.000Z</updated>
-        <content type="html"><![CDATA[<p>麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
-<p>感觉有一些麻将视频值得多看几遍，至少要给自己点信心。<br>
-1、星野Poteto<br>
-<a href="https://www.youtube.com/c/%E6%98%9F%E9%87%8EPoteto/videos">油管频道链接(视频更全面)</a>  <a href="https://space.bilibili.com/303003611/video">B站</a><br>
-2、魔女的日麻教程<br>
-<a href="https://www.youtube.com/channel/UCpUXhakFVdqUvcuunBciaew">油管频道链接(粤语听不懂)</a><br>
-<a href="https://bbs.nga.cn/read.php?tid=24964074&amp;page=1">魔女BLOG初中级日麻讲座(简中翻译版PDF)</a></p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[我的麻将经历]]></title>
         <id>https://92rw.github.io/post/Mahjong-experience/</id>
@@ -62,6 +47,32 @@
 <a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
 </li>
 </ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[个人收集到的麻将教程]]></title>
+        <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
+        <link href="https://92rw.github.io/post/Mahjong-Tutorials/">
+        </link>
+        <updated>2021-08-25T13:35:24.000Z</updated>
+        <content type="html"><![CDATA[<p>之前在文章<a href="https://92rw.github.io/post/Mahjong-experience/">《我的麻将经历》</a>里介绍了一点自己和麻将的故事，然而自己的实践确实比不过大数据分析下的牌谱经验。麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
+<p>感觉有一些麻将资料值得多看几遍，至少要给自己点信心。</p>
+<ol>
+<li>
+<p>教学类视频<br>
+<a href="https://www.youtube.com/c/%E6%98%9F%E9%87%8EPoteto/videos">星野Poteto</a><br>
+<a href="https://www.youtube.com/channel/UCpUXhakFVdqUvcuunBciaew">魔女日麻教程(粤语听不懂)</a><br>
+<a href="https://space.bilibili.com/2899425">B站up主汉化「麻将的职人」系列</a></p>
+</li>
+<li>
+<p>教学类文章<br>
+<a href="https://bbs.nga.cn/read.php?tid=24964074&amp;page=1">魔女BLOG初中级日麻讲座(简中翻译版PDF)</a><br>
+<a href="https://zh.wikipedia.org/wiki/%E5%90%AC%E7%89%8C">维基百科介绍的听牌案例</a><br>
+<a href="https://www.bilibili.com/read/readlist/rl398453">B站连载《麻将技术教科书：不会放铳的打法》</a><br>
+<a href="https://space.bilibili.com/680263/article">B站up主SonicFantasia介绍日麻规则及《天才麻将少女》中的规则介绍</a></p>
+</li>
+<li></li>
+</ol>
 ]]></content>
     </entry>
     <entry>

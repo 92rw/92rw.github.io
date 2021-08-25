@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-25T15:33:32.618Z</updated>
+    <updated>2021-08-25T16:53:07.953Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>https://92rw.github.io/images/avatar.png</logo>
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
+    <entry>
+        <title type="html"><![CDATA[近期学习Notion的一些网址]]></title>
+        <id>https://92rw.github.io/post/jin-qi-xue-xi-notion-de-yi-xie-wang-zhi/</id>
+        <link href="https://92rw.github.io/post/jin-qi-xue-xi-notion-de-yi-xie-wang-zhi/">
+        </link>
+        <updated>2021-08-25T15:36:35.000Z</updated>
+        <content type="html"><![CDATA[<p>原本只是想研究一下Markdown，然后就看到很多人推荐Notion作为工具。目前使用下来感觉确实不错，于是整理了一些链接，方便日后找时间学习</p>
+<ul>
+<li>
+<p>Markdown教程<br>
+<a href="https://xianbai.me/learn-md/index.html">语法入门教程</a></p>
+</li>
+<li>
+<p>从零开始的教程<br>
+<a href="https://www.notion.so/Help-Support-Documentation-e040febf70a94950b8620e6f00005004">Notion英文教程</a><br>
+<a href="https://www.notion.so/Notion-64ab96a7fccf4d74b9a9a68b338bc501">Notion中文教程</a><br>
+<a href="https://www.notion.so/Notion-2f3c5b06b3ad406bad8cf065ed3cca7c">Notion 充电中心</a></p>
+</li>
+<li>
+<p>综合性教程<br>
+<a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[建站感言]]></title>
         <id>https://92rw.github.io/post/about/</id>

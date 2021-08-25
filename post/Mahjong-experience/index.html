@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="代码初心者">
 <meta name="theme-color" content="#000">
-<title>建站感言 | 92rw</title>
+<title>我的麻将经历 | 92rw</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1629914110329">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -41,8 +41,8 @@
 
 
 
-  <meta name="description" content="建站感言" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="我的麻将经历" />
+  <meta name="keywords" content="麻将" />
 </head>
 
 <body>
@@ -193,8 +193,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -230,198 +229,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86">⛹ 个人经历</a></li>
-<li><a href="#%E4%BB%A5%E5%90%8E%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%8F%91%E7%9A%84%E5%86%85%E5%AE%B9">📬 以后可能会发的内容</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -509,8 +316,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://92rw.github.io/post/about/">
-      建站感言
+    <a class="post-title-link" href="https://92rw.github.io/post/Mahjong-experience/">
+      我的麻将经历
     </a>
   </h1>
   <div class="post-meta">
@@ -518,38 +325,83 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-08-25 15:00:00">2021-08-25</span>
+      <span class="publish-time" data-t="2021-08-25 22:56:30">2021-08-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://92rw.github.io/tag/ly3wT2msV/">
+        <span>麻将</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>143<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>826<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>原本只是想学一下markdown怎么写，没想到Github也能托管网址，于是开始尝试这种模式</p>
-<p>此网站根据Gridea创建，采用nexT主题，感谢诸多程序员大佬们的分享。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>空闲时间不够充裕的社畜，从事和代码无关的职业</p>
-<h2 id="个人经历">⛹ 个人经历</h2>
-<p>曾经多次想学习代码，却又只是了解皮毛。被各种算法劝退</p>
-<h2 id="以后可能会发的内容">📬 以后可能会发的内容</h2>
-<p>学习心得</p>
+              <p>一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
+<p>2021年7月22日的线下麻将，让我重燃麻将瘾。然而至今不知道牌怎么摞，起章从哪拿这些国标麻将的内容。也就更不了解日麻怎么翻宝牌、怎么算番之类的。不过雀魂是实打实地玩起来了，在8月把四人和三人的等级都提升到雀杰，然后又看完了《魔女BLOG初中級日麻讲座（简中翻译第2版）》，于是又开小号希望能洗掉自己尴尬的失败率。然而自己毕竟实践不足经验欠缺，在牌桌上经常根据自己喜好对落单的单张牌随意摸切，不考虑牌河和牌效率，然后在几轮后摸到凑搭子的牌，只能扔进弃牌区望洋兴叹。</p>
+<p>原以为一个月的学习能让自己的水平有所提高，然而在8月22日的线下麻将中，依然感受到了自己水平的不足。虽说自己起手不如人，但是在自己多向听、且接近流局情况下仍不做防守，以至于我成了庄家轮转的推动者，确实是自己水平不足。</p>
+<p>线上麻将也不乐观，感觉现在雀魂低等级房间也是各路高手们在开小号互相比技巧，以至于我在银之间的小号成绩比在金之间的雀杰号更狼狈，更别说自己一局从领先第二名2万分，连续两个役満大铳被飞了，在有优势的情况下仍不收手，这是之前玩南风局就没改正的坏习惯。</p>
+<p>最近开始在B站搜索麻将的视频，原本是看各路神仙玩大牌的，实践中发现光起手我就难以匹及，最后还是科学麻将的一些教学更符合我的非酋特性。8月份开始补番《天才麻将少女》，到8月底补完第一季和阿知贺篇，全国篇也就看到前面几集。我觉得有必要给自己整理一份麻将教程，放在** <a href="https://92rw.github.io/post/Mahjong-Tutorials/">个人网站</a> **里。</p>
+<p>这一个月的时间内，晚上因为沉迷麻将疏于锻炼，养成了不好的习惯。总结了如上经历，我觉得像胡适那样沉迷打牌确实不好，写下这篇总结之后我要开始改变。当前的计划是年底前学完N1的考前对策，目前还有很多的书要看。</p>
 
             </div>
             
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      我是谁
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://92rw.github.io/post/Mahjong-experience/" title="我的麻将经历">https://92rw.github.io/post/Mahjong-experience/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://92rw.github.io/tag/ly3wT2msV/"># 麻将</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="个人收集到的麻将教程" href="https://92rw.github.io/post/Mahjong-Tutorials/">个人收集到的麻将教程</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="个人收集到的麻将教程" href="https://92rw.github.io/post/Mahjong-Tutorials/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="近期学习Notion的一些网址" href="https://92rw.github.io/post/jin-qi-xue-xi-notion-de-yi-xie-wang-zhi/">近期学习Notion的一些网址</a>
+        <a class="nav-mobile-next" title="近期学习Notion的一些网址" href="https://92rw.github.io/post/jin-qi-xue-xi-notion-de-yi-xie-wang-zhi/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
             
   

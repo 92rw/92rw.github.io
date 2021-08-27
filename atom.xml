@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-27T03:58:29.818Z</updated>
+    <updated>2021-08-27T05:03:17.503Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://92rw.github.io/images/avatar.png</logo>
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
+    <entry>
+        <title type="html"><![CDATA[Github的踩坑记录]]></title>
+        <id>https://92rw.github.io/post/github-de-cai-keng-ji-lu/</id>
+        <link href="https://92rw.github.io/post/github-de-cai-keng-ji-lu/">
+        </link>
+        <updated>2021-08-27T03:57:40.000Z</updated>
+        <content type="html"><![CDATA[<p>虽然暂时还没有考虑成为以代码为生，但是却早早注册了github帐号，但也只是拿这个网站当作下载优秀软件的工具和给优秀作者点赞的平台而已。今天在阮一峰的网络日志看到了<a href="https://www.ruanyifeng.com/blog/2021/08/best-note-taking-software-for-programmers.html">利用Github仓库作为笔记软件</a> 的方法，顿感Github能提供的功能比我想象的更多，可能有仔细读一读说明文档了。</p>
+<ul>
+<li>因为没有读过说明文档，把这整个github仓库设置为私密，导致这个网站无法登录😅</li>
+<li></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[个人收集到的麻将教程]]></title>
         <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
@@ -79,7 +92,7 @@
         <id>https://92rw.github.io/post/Markdown-tutorial/</id>
         <link href="https://92rw.github.io/post/Markdown-tutorial/">
         </link>
-        <updated>2021-08-25T07:00:00.000Z</updated>
+        <updated>2021-08-25T06:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>几年前看到有人推荐Markdown，然而并没有想着去学习。最近一接触才发现这确实是个非常好的工具，省下了很多和Word排版斗智斗勇的时间。然后又看到很多人推荐Notion、Typora，使用下来真的是方便了许多。个人于是整理了一些链接，方便日后找时间深入研究</p>
 <ul>
 <li>

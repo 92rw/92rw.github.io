@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-27T15:27:27.155Z</updated>
+    <updated>2021-08-27T17:28:49.160Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -11,23 +11,11 @@
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
     <entry>
-        <title type="html"><![CDATA[用程序简化工作内容]]></title>
-        <id>https://92rw.github.io/post/Programming-experience/</id>
-        <link href="https://92rw.github.io/post/Programming-experience/">
-        </link>
-        <updated>2021-08-27T10:46:53.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="office的工具使用">Office的工具使用</h1>
-<h2 id="邮件合并填word表格">邮件合并填Word表格</h2>
-<p>被word排版折磨的经历，在每个期末都十分令人头痛。工作中很多下发的表格也都是word格式，我原本以为调用数据需要用到python的pandas表格，然而查过一些文章发现office自带的邮件合并功能就可以借助excel来填写对应到word里面的数据。python毕竟还需要一个个在</p>
-<h1 id="python实现的功能">Python实现的功能</h1>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[CAD和BIM的操作笔记]]></title>
         <id>https://92rw.github.io/post/CAD-Memorandum/</id>
         <link href="https://92rw.github.io/post/CAD-Memorandum/">
         </link>
-        <updated>2021-08-27T07:46:26.000Z</updated>
+        <updated>2021-08-27T06:46:26.000Z</updated>
         <content type="html"><![CDATA[<p>从大学起AutoCAD和Revit就一直常驻电脑，然而很多时候还是感觉自己水平不够，需要时常学习。然而我又不是整天对着电脑画图，学完之后一段时间不用就忘了怎么操作。借此机会记录一些常用的操作，以便日后节省时间。</p>
 <h1 id="cad操作笔记">CAD操作笔记</h1>
 <h2 id="快捷键的使用">快捷键的使用</h2>
@@ -39,11 +27,56 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[用程序简化工作内容]]></title>
+        <id>https://92rw.github.io/post/Programming-experience/</id>
+        <link href="https://92rw.github.io/post/Programming-experience/">
+        </link>
+        <updated>2021-08-27T02:46:53.000Z</updated>
+        <content type="html"><![CDATA[<p>图片一直是一个困扰人的难题，毕竟每次的尺寸不一致，要让图片被程序自动裁剪的话总会有问题出现。程序处理纯文字性的东西处理起来还算简单，有了图片就免不了人工干预的步骤了。</p>
+<h1 id="office的工具使用">Office的工具使用</h1>
+<h2 id="邮件合并填word表格">邮件合并填Word表格</h2>
+<p>Office自带的邮件合并功能确实更好用，因其可视化程度高而胜过python。<br>
+工作步骤：</p>
+<ul>
+<li>检查确保Excel首行为标题字段</li>
+<li>调整好Word格式后，点击上方“邮件”选项卡
+<ul>
+<li>“开始邮件合并”→“邮件合并分步向导”，点击“下一步：开始文档”</li>
+<li>选中“使用当前文档”，点击“下一步：选中收件人”</li>
+<li>选中“使用现有列表”，点击“浏览”导入Excel中对应工作表，点击“下一步：撰写信函”</li>
+<li>鼠标选择填写数据的位置，点击右侧导航栏“其他项目”，选择对应标题字段，点击“下一步：预览信函”</li>
+<li>确认合并情况无误，点击“下一步：完成合并”</li>
+<li>点击“编辑单个信函”，根据需要选择范围</li>
+</ul>
+</li>
+</ul>
+<p>如果希望插入图片</p>
+<ol>
+<li>在Excel中标记图片地址，注意<code>\</code>应写为<code>\\</code></li>
+<li>在Word点击上方“插入”选项卡，选择右侧“文档部件”</li>
+<li>选择“域”后左侧菜单选“IncludePicture”，域属性输入“其他”</li>
+<li>选中新增的内容，按<code>Alt+F9</code>，将“其他”替换为“邮件”选项卡中“插入合并域”的内容</li>
+<li>若依旧没有显示，全选后按<code>F9</code>即可</li>
+</ol>
+<p>如果希望将做好后的部分分拆至不同文件：</p>
+<ol>
+<li>点击上方“引用”选项卡，选择左侧“添加文字”为1级</li>
+<li>点击上方“视图”选项卡，选择左侧“大纲”，在“显示级别”下拉菜单选择“1级”</li>
+<li>按住键盘Shift键将其全选，点击“显示文档”全选后点击“创建”</li>
+<li>将文件另存为，将得到独立文件`</li>
+</ol>
+<h2 id="excel-的冻结窗格">Excel 的冻结窗格</h2>
+<p>点击上方“视图”选项卡，点击“拆分”将十字线定位后选择“冻结窗格”</p>
+<h1 id="python实现的功能">Python实现的功能</h1>
+<p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[查资源的网站]]></title>
         <id>https://92rw.github.io/post/Resource-index/</id>
         <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-27T00:00:00.000Z</updated>
+        <updated>2021-08-26T23:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
 <h2 id="查电子书">查电子书</h2>
 <ul>
@@ -158,21 +191,23 @@
         <id>https://92rw.github.io/post/about/</id>
         <link href="https://92rw.github.io/post/about/">
         </link>
-        <updated>2021-08-24T23:00:00.000Z</updated>
+        <updated>2021-08-24T21:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+<p>👏  欢迎来到我的小站呀，很高兴遇见你！🤝<br>
+🏷️  这个网站使用静态博客写作客户端<strong>Gridea</strong>创立。你可以用它来记录生活📝、心情💬、知识✍️、笔记📋、创意💻……</p>
 </blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>原本只是想学一下markdown怎么写，没想到Github也能托管网址，于是开始尝试这种模式</p>
+<h2 id="关于本站">🏠 关于本站 👇</h2>
+<p>原本只是想学一下markdown怎么写，没想到Github也能托管网址🌎，于是开始尝试这种模式</p>
 <p>此网站根据Gridea创建，采用fog主题，感谢诸多程序员大佬们的付出，让我可以专心内容整理。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<h2 id="博主是谁">👨‍💻 博主是谁 🌱</h2>
 <p>空闲时间不够充裕的社畜，从事和代码无关的职业</p>
-<h2 id="个人经历">⛹ 个人经历</h2>
+<h2 id="个人经历">⛹ 个人经历🌉</h2>
 <p>既然把个人主页建立在一个程序员的网站上，我就大概介绍一下自己的代码经历吧。最早是初中时候接触pascal，然后发现自己数学逻辑能力不强，也没记住几行公示，就回归应试教育的做题路径去了。这段时期听说了易语言，也尝试过学习php建立个人网站，最后发现自己还是更沉迷其他东西，这种应用工具般的东西也就搁置一边去了。<br>
 大学的时候有C#课程，然而我总想着自己也不会从事相关工作，也没想过考个计算机二级证书，直到大三才直到程序员是本专业的翻倍收入，开始羡慕起他们的工作环境和配套设施。然而需要补足的功课过多，只能在图书馆找各种教程并花钱报了学习班。然而书本和实际应用差距依旧不小，想去leetcode刷题发现自己根本不知道如何求解、想看别人如何套用各种族库却对写好的源码前几十行一头雾水，感觉投入的时间根本不足回报。最后还是从事起了和大学专业相关的工作，不过是C盘多了几个jupyter nootbook的文件夹，装满了一堆工作用不上的内容。<br>
-工作中有各种报表要填写，自己一个个手动改不仅出错率高，而且重复劳动十分无趣。我开始尝试重新拾起手头的工具，尝试用程序简化自己的劳动内容，具体的经历写在这篇文章里。</p>
-<h2 id="建站目的">📬建站目的</h2>
+工作中有各种报表要填写，自己一个个手动改不仅出错率高，而且重复劳动十分无趣。我开始尝试重新拾起手头的工具，尝试用程序简化自己的劳动内容，具体的经历写在<a href="https://92rw.github.io/post/Programming-experience">这篇文章</a>里。</p>
+<h2 id="建站目的">📬建站目的🌁</h2>
 <p>当作学习心得笔记，方便日后重新查看</p>
+<p>🇬🇧  🖥   🏃 😘</p>
 ]]></content>
     </entry>
 </feed>

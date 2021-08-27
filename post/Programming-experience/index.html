@@ -2,10 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Office的工具使用
+    <meta name="description" content="图片一直是一个困扰人的难题，毕竟每次的尺寸不一致，要让图片被程序自动裁剪的话总会有问题出现。程序处理纯文字性的东西处理起来还算简单，有了图片就免不了人工干预的步骤了。
+Office的工具使用
 邮件合并填Word表格
-被word排版折磨的经历，在每个期末都十分令人头痛。工作中很多下发的表格也都是word格式，我原本以为调用数据需要用到python的pandas表格，然而查过一些文章发现office自带的邮件..." />
-    <meta name="keywords" content="代码" />
+Office自带的邮件合..." />
+    <meta name="keywords" content="建筑工程,代码" />
     <link rel="stylesheet" href="https://92rw.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://92rw.github.io/styles/main.css">
     <!-- 代码渲染风格css -->
@@ -259,7 +260,7 @@
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630077571821" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630085320445" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -269,7 +270,7 @@
         </div>
         <div class="siteinfocontainer">
             <span class="siteinfo" id="siteinfo-postsnum"></span>
-            <span class="siteinfo">3</span>
+            <span class="siteinfo">5</span>
         </div>
         
         <div class="search">
@@ -460,14 +461,14 @@
     <div id="side-posttitle" style="display: none;">
     
     
-    用程序简化工作内容
+    CAD和BIM的操作笔记
     <script>
         postsnum += 1
     </script>
     
     
     
-    CAD和BIM的操作笔记
+    用程序简化工作内容
     <script>
         postsnum += 1
     </script>
@@ -1004,22 +1005,24 @@ menulist.eq(i).show();
         <div class="postshow postpadding" style="padding-bottom: 0;">
             
             <div class="postdetailimg">
-                
-                <img src="https://ericamblog.oss-cn-shanghai.aliyuncs.com/2020/k98jl6%20(1).png" class="postimage">
-                
+                <img src="https://92rw.github.io/post-images/Programming-experience.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/OMQToiQbf/" class="postlink">
-                    <i class="fa fa-tag"></i> 代码
-                </a>
-                
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
+                        <i class="fa fa-tag"></i> 建筑工程
+                    </a>
+                    
+                    <a data-pjax href="https://92rw.github.io/tag/OMQToiQbf/" class="postlink">
+                        <i class="fa fa-tag"></i> 代码
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
+            
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
                 <h2 id="ptitle">用程序简化工作内容</h2>
@@ -1029,10 +1032,43 @@ menulist.eq(i).show();
                 
             </div>
             <div class="text ">
-                <h1 id="office的工具使用">Office的工具使用</h1>
+                <p>图片一直是一个困扰人的难题，毕竟每次的尺寸不一致，要让图片被程序自动裁剪的话总会有问题出现。程序处理纯文字性的东西处理起来还算简单，有了图片就免不了人工干预的步骤了。</p>
+<h1 id="office的工具使用">Office的工具使用</h1>
 <h2 id="邮件合并填word表格">邮件合并填Word表格</h2>
-<p>被word排版折磨的经历，在每个期末都十分令人头痛。工作中很多下发的表格也都是word格式，我原本以为调用数据需要用到python的pandas表格，然而查过一些文章发现office自带的邮件合并功能就可以借助excel来填写对应到word里面的数据。python毕竟还需要一个个在</p>
+<p>Office自带的邮件合并功能确实更好用，因其可视化程度高而胜过python。<br>
+工作步骤：</p>
+<ul>
+<li>检查确保Excel首行为标题字段</li>
+<li>调整好Word格式后，点击上方“邮件”选项卡
+<ul>
+<li>“开始邮件合并”→“邮件合并分步向导”，点击“下一步：开始文档”</li>
+<li>选中“使用当前文档”，点击“下一步：选中收件人”</li>
+<li>选中“使用现有列表”，点击“浏览”导入Excel中对应工作表，点击“下一步：撰写信函”</li>
+<li>鼠标选择填写数据的位置，点击右侧导航栏“其他项目”，选择对应标题字段，点击“下一步：预览信函”</li>
+<li>确认合并情况无误，点击“下一步：完成合并”</li>
+<li>点击“编辑单个信函”，根据需要选择范围</li>
+</ul>
+</li>
+</ul>
+<p>如果希望插入图片</p>
+<ol>
+<li>在Excel中标记图片地址，注意<code>\</code>应写为<code>\\</code></li>
+<li>在Word点击上方“插入”选项卡，选择右侧“文档部件”</li>
+<li>选择“域”后左侧菜单选“IncludePicture”，域属性输入“其他”</li>
+<li>选中新增的内容，按<code>Alt+F9</code>，将“其他”替换为“邮件”选项卡中“插入合并域”的内容</li>
+<li>若依旧没有显示，全选后按<code>F9</code>即可</li>
+</ol>
+<p>如果希望将做好后的部分分拆至不同文件：</p>
+<ol>
+<li>点击上方“引用”选项卡，选择左侧“添加文字”为1级</li>
+<li>点击上方“视图”选项卡，选择左侧“大纲”，在“显示级别”下拉菜单选择“1级”</li>
+<li>按住键盘Shift键将其全选，点击“显示文档”全选后点击“创建”</li>
+<li>将文件另存为，将得到独立文件`</li>
+</ol>
+<h2 id="excel-的冻结窗格">Excel 的冻结窗格</h2>
+<p>点击上方“视图”选项卡，点击“拆分”将十字线定位后选择“冻结窗格”</p>
 <h1 id="python实现的功能">Python实现的功能</h1>
+<p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性</p>
 
             </div>
             <hr style="width: 80%;">
@@ -1074,17 +1110,29 @@ menulist.eq(i).show();
             
         <div id="otherpost">
             
-            
-            <a data-pjax class="next-post-pc" href="https://92rw.github.io/post/CAD-Memorandum/"  style="color: black;">
-                <div id="npcontainer">
+            <a  data-pjax class="prev-post-pc" href="https://92rw.github.io/post/CAD-Memorandum/"  style="color: black;">
+                <div id="ppcontainer">
                     
                     <img src="https://92rw.github.io/post-images/CAD-Memorandum.png" style="width: 100%;" class="opimg">
                     
                     <h4 class="optitle">CAD和BIM的操作笔记</h4>
                 </div>
             </a>
+            <div class="prev-post">
+                上一篇 <a  data-pjax href="https://92rw.github.io/post/CAD-Memorandum/">CAD和BIM的操作笔记</a>
+            </div>
+            
+            
+            <a data-pjax class="next-post-pc" href="https://92rw.github.io/post/Resource-index/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://92rw.github.io/post-images/Resource-index.webp" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">查资源的网站</h4>
+                </div>
+            </a>
             <div class="next-post">
-                下一篇 <a  data-pjax href="https://92rw.github.io/post/CAD-Memorandum/">CAD和BIM的操作笔记</a>
+                下一篇 <a  data-pjax href="https://92rw.github.io/post/Resource-index/">查资源的网站</a>
             </div>
             
         </div>
@@ -1108,6 +1156,7 @@ menulist.eq(i).show();
 <li><a href="#office%E7%9A%84%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8">Office的工具使用</a>
 <ul>
 <li><a href="#%E9%82%AE%E4%BB%B6%E5%90%88%E5%B9%B6%E5%A1%ABword%E8%A1%A8%E6%A0%BC">邮件合并填Word表格</a></li>
+<li><a href="#excel-%E7%9A%84%E5%86%BB%E7%BB%93%E7%AA%97%E6%A0%BC">Excel 的冻结窗格</a></li>
 </ul>
 </li>
 <li><a href="#python%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD">Python实现的功能</a></li>

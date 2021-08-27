@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-27T07:13:46.793Z</updated>
+    <updated>2021-08-27T07:42:32.596Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://92rw.github.io/post/Resource-index/</id>
         <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-27T05:08:53.000Z</updated>
+        <updated>2021-08-27T04:08:53.000Z</updated>
         <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
 <p>#查电子书</p>
 <ul>
@@ -29,7 +29,7 @@
         <id>https://92rw.github.io/post/Github-beginner/</id>
         <link href="https://92rw.github.io/post/Github-beginner/">
         </link>
-        <updated>2021-08-27T02:57:40.000Z</updated>
+        <updated>2021-08-26T23:57:40.000Z</updated>
         <content type="html"><![CDATA[<p>虽然暂时还没有考虑成为以代码为生，但是却早早注册了github帐号，但也只是拿这个网站当作下载优秀软件的工具和给优秀作者点赞的平台而已。今天在阮一峰的网络日志看到了<a href="https://www.ruanyifeng.com/blog/2021/08/best-note-taking-software-for-programmers.html">利用Github仓库作为笔记软件</a> 的方法，顿感Github能提供的功能比我想象的更多，可能有仔细读一读说明文档了。</p>
 <ul>
 <li>因为没有读过说明文档，把这整个github仓库设置为私密，导致这个网站无法登录😅</li>
@@ -42,7 +42,7 @@
         <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
         <link href="https://92rw.github.io/post/Mahjong-Tutorials/">
         </link>
-        <updated>2021-08-25T21:00:00.000Z</updated>
+        <updated>2021-08-25T19:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>  之前在文章<a href="https://92rw.github.io/post/Mahjong-experience/">《我的麻将经历》</a>里介绍了一点自己和麻将的故事，然而自己的实践确实比不过大数据分析下的牌谱经验。麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
 <p>感觉有一些麻将资料值得多看几遍，至少要给自己点信心。</p>
 <ol>
@@ -64,6 +64,7 @@
 <a href="http://mjall.jp/t0001/">麻将役牌介绍</a> 这个网站也有从零开始的文字教程</p>
 </li>
 </ol>
+<p>（文章封面来自星野Poteto的教学视频）</p>
 ]]></content>
     </entry>
     <entry>
@@ -90,7 +91,7 @@
         <id>https://92rw.github.io/post/Markdown-tutorial/</id>
         <link href="https://92rw.github.io/post/Markdown-tutorial/">
         </link>
-        <updated>2021-08-25T06:00:00.000Z</updated>
+        <updated>2021-08-25T03:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>几年前看到有人推荐Markdown，然而并没有想着去学习。最近一接触才发现这确实是个非常好的工具，省下了很多和Word排版斗智斗勇的时间。然后又看到很多人推荐Notion、Typora，使用下来真的是方便了许多。个人于是整理了一些链接，方便日后找时间深入研究</p>
 <ul>
 <li>
@@ -117,7 +118,7 @@
         <id>https://92rw.github.io/post/about/</id>
         <link href="https://92rw.github.io/post/about/">
         </link>
-        <updated>2021-08-25T06:00:00.000Z</updated>
+        <updated>2021-08-25T02:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>

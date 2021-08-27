@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-26T01:13:09.669Z</updated>
+    <updated>2021-08-27T03:58:29.818Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -55,31 +55,6 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[近期学习Notion的一些网址]]></title>
-        <id>https://92rw.github.io/post/Notion-tutorial/</id>
-        <link href="https://92rw.github.io/post/Notion-tutorial/">
-        </link>
-        <updated>2021-08-25T09:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>  原本只是想研究一下Markdown，然后就看到很多人推荐Notion作为工具。目前使用下来感觉确实不错，于是整理了一些链接，方便日后找时间学习</p>
-<ul>
-<li>
-<p>Markdown教程<br>
-<a href="https://xianbai.me/learn-md/index.html">语法入门教程</a></p>
-</li>
-<li>
-<p>从零开始的教程<br>
-<a href="https://www.notion.so/Help-Support-Documentation-e040febf70a94950b8620e6f00005004">Notion英文教程</a><br>
-<a href="https://www.notion.so/Notion-64ab96a7fccf4d74b9a9a68b338bc501">Notion中文教程</a><br>
-<a href="https://www.notion.so/Notion-2f3c5b06b3ad406bad8cf065ed3cca7c">Notion 充电中心</a></p>
-</li>
-<li>
-<p>综合性教程<br>
-<a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
-</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[建站感言]]></title>
         <id>https://92rw.github.io/post/about/</id>
         <link href="https://92rw.github.io/post/about/">
@@ -97,6 +72,33 @@
 <p>曾经多次想学习代码，却又只是了解皮毛。被各种算法劝退</p>
 <h2 id="以后可能会发的内容">📬 以后可能会发的内容</h2>
 <p>学习心得</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Markdown是一个好东西]]></title>
+        <id>https://92rw.github.io/post/Markdown-tutorial/</id>
+        <link href="https://92rw.github.io/post/Markdown-tutorial/">
+        </link>
+        <updated>2021-08-25T07:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>几年前看到有人推荐Markdown，然而并没有想着去学习。最近一接触才发现这确实是个非常好的工具，省下了很多和Word排版斗智斗勇的时间。然后又看到很多人推荐Notion、Typora，使用下来真的是方便了许多。个人于是整理了一些链接，方便日后找时间深入研究</p>
+<ul>
+<li>
+<p>Markdown教程<br>
+<a href="https://xianbai.me/learn-md/index.html">语法入门教程</a><br>
+<a href="https://www.jianshu.com/p/db1d26af109d">比较详细的Markdown语法教程</a><br>
+<a href="https://www.runoob.com/markdown/md-advance.html">使用Markdown来画流程图的方法</a></p>
+</li>
+<li>
+<p>从零开始的教程<br>
+<a href="https://www.notion.so/Help-Support-Documentation-e040febf70a94950b8620e6f00005004">Notion英文教程</a><br>
+<a href="https://www.notion.so/Notion-64ab96a7fccf4d74b9a9a68b338bc501">Notion中文教程</a><br>
+<a href="https://www.notion.so/Notion-2f3c5b06b3ad406bad8cf065ed3cca7c">Notion 充电中心</a></p>
+</li>
+<li>
+<p>综合性教程<br>
+<a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
+</li>
+</ul>
 ]]></content>
     </entry>
 </feed>

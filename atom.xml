@@ -2,26 +2,66 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-27T07:42:32.596Z</updated>
+    <updated>2021-08-27T15:19:18.397Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
-    <subtitle>代码初心者</subtitle>
+    <subtitle>记录个人的一些生活笔记</subtitle>
     <logo>https://92rw.github.io/images/avatar.png</logo>
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
+    <entry>
+        <title type="html"><![CDATA[用程序简化工作内容]]></title>
+        <id>https://92rw.github.io/post/Programming-experience/</id>
+        <link href="https://92rw.github.io/post/Programming-experience/">
+        </link>
+        <updated>2021-08-27T10:46:53.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="office的工具使用">Office的工具使用</h1>
+<h2 id="邮件合并填word表格">邮件合并填Word表格</h2>
+<p>被word排版折磨的经历，在每个期末都十分令人头痛。工作中很多下发的表格也都是word格式，我原本以为调用数据需要用到python的pandas表格，然而查过一些文章发现office自带的邮件合并功能就可以借助excel来填写对应到word里面的数据。python毕竟还需要一个个在</p>
+<h1 id="python实现的功能">Python实现的功能</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CAD和BIM的操作笔记]]></title>
+        <id>https://92rw.github.io/post/CAD-Memorandum/</id>
+        <link href="https://92rw.github.io/post/CAD-Memorandum/">
+        </link>
+        <updated>2021-08-27T07:46:26.000Z</updated>
+        <content type="html"><![CDATA[<p>从大学起AutoCAD和Revit就一直常驻电脑，然而很多时候还是感觉自己水平不够，需要时常学习。然而我又不是整天对着电脑画图，学完之后一段时间不用就忘了怎么操作。借此机会记录一些常用的操作，以便日后节省时间。</p>
+<h1 id="cad操作笔记">CAD操作笔记</h1>
+<h2 id="快捷键的使用">快捷键的使用</h2>
+<p><a href="https://www.autodesk.com.cn/shortcuts/autocad">官方文档</a>中列出了各种快捷键，但是我觉得平时常用的也就只是其中几个而已。</p>
+<h2 id="视口的使用">视口的使用</h2>
+<p>输入<code>mv</code>框选视口的范围，还可以设置其标注比例、限定显示的图层，对于按标准尺寸打印图纸十分有帮助。</p>
+<h1 id="revit操作笔记">Revit操作笔记</h1>
+<p>好久没用了，近期的工作内容和Revit的关系并不大，等以后有机会了再补充。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[查资源的网站]]></title>
         <id>https://92rw.github.io/post/Resource-index/</id>
         <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-27T04:08:53.000Z</updated>
+        <updated>2021-08-27T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
-<p>#查电子书</p>
+<h2 id="查电子书">查电子书</h2>
 <ul>
 <li><a href="https://libgen.is/">创世纪图书馆</a>：科学论文及书籍</li>
 <li><a href="https://www.jiumodiary.com/">鸠摩搜索</a>：搜索网盘上的书籍</li>
 </ul>
+<h2 id="工程资料">工程资料</h2>
+<ul>
+<li><a href="http://www.tuji8.com/">图集吧</a></li>
+<li><a href="https://www.guifanku.com/">规范库</a></li>
+<li><a href="http://www.downcc.com/">绿色资源网</a></li>
+</ul>
+<h2 id="查前端资源">查前端资源</h2>
+<ul>
+<li><a href="https://www.thosefree.com/">那些免费的砖</a>：查字体、查图片、查设计教程</li>
+<li><a href="https://coolbackgrounds.io/">Cool Backgrounds</a>：定制网页图片</li>
+</ul>
+<h2 id="查下载链接">查下载链接</h2>
 ]]></content>
     </entry>
     <entry>
@@ -29,11 +69,11 @@
         <id>https://92rw.github.io/post/Github-beginner/</id>
         <link href="https://92rw.github.io/post/Github-beginner/">
         </link>
-        <updated>2021-08-26T23:57:40.000Z</updated>
+        <updated>2021-08-26T20:57:40.000Z</updated>
         <content type="html"><![CDATA[<p>虽然暂时还没有考虑成为以代码为生，但是却早早注册了github帐号，但也只是拿这个网站当作下载优秀软件的工具和给优秀作者点赞的平台而已。今天在阮一峰的网络日志看到了<a href="https://www.ruanyifeng.com/blog/2021/08/best-note-taking-software-for-programmers.html">利用Github仓库作为笔记软件</a> 的方法，顿感Github能提供的功能比我想象的更多，可能有仔细读一读说明文档了。</p>
 <ul>
 <li>因为没有读过说明文档，把这整个github仓库设置为私密，导致这个网站无法登录😅</li>
-<li></li>
+<li>读了<a href="https://docs.github.com/cn/github/getting-started-with-github/quickstart/create-a-repo">说明文档</a>才知道，除了所见即所得的emoji外，markdown还可以用<code>:emoji符号名:</code>的格式输入emoji表情</li>
 </ul>
 ]]></content>
     </entry>
@@ -42,7 +82,7 @@
         <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
         <link href="https://92rw.github.io/post/Mahjong-Tutorials/">
         </link>
-        <updated>2021-08-25T19:00:00.000Z</updated>
+        <updated>2021-08-25T17:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>  之前在文章<a href="https://92rw.github.io/post/Mahjong-experience/">《我的麻将经历》</a>里介绍了一点自己和麻将的故事，然而自己的实践确实比不过大数据分析下的牌谱经验。麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
 <p>感觉有一些麻将资料值得多看几遍，至少要给自己点信心。</p>
 <ol>
@@ -64,7 +104,6 @@
 <a href="http://mjall.jp/t0001/">麻将役牌介绍</a> 这个网站也有从零开始的文字教程</p>
 </li>
 </ol>
-<p>（文章封面来自星野Poteto的教学视频）</p>
 ]]></content>
     </entry>
     <entry>
@@ -72,18 +111,20 @@
         <id>https://92rw.github.io/post/Mahjong-experience/</id>
         <link href="https://92rw.github.io/post/Mahjong-experience/">
         </link>
-        <updated>2021-08-25T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>  一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
+        <updated>2021-08-25T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>  一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
+        <content type="html"><![CDATA[<p>一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
 <!-- more -->
-<p>  2021年7月22日的线下麻将，让我重燃麻将瘾。然而至今不知道牌怎么摞，起章从哪拿这些国标麻将的内容。也就更不了解日麻怎么翻宝牌、怎么算番之类的。不过雀魂是实打实地玩起来了，在8月把四人和三人的等级都提升到雀杰，然后又看完了《魔女BLOG初中級日麻讲座（简中翻译第2版）》，于是又开小号希望能洗掉自己尴尬的失败率。然而自己毕竟实践不足经验欠缺，在牌桌上经常根据自己喜好对落单的单张牌随意摸切，不考虑牌河和牌效率，然后在几轮后摸到凑搭子的牌，只能扔进弃牌区望洋兴叹。</p>
-<p>  原以为一个月的学习能让自己的水平有所提高，然而在8月22日的线下麻将中，依然感受到了自己水平的不足。虽说自己起手不如人，但是在自己多向听、且接近流局情况下仍不做防守，以至于我成了庄家轮转的推动者，确实是自己水平不足。</p>
-<p>  线上麻将也不乐观，感觉现在雀魂低等级房间也是各路高手们在开小号互相比技巧，以至于我在银之间的小号成绩比在金之间的雀杰号更狼狈，更别说自己一局从领先第二名2万分，连续两个役満大铳被飞了，在有优势的情况下仍不收手，这是之前玩南风局就没改正的坏习惯。</p>
+<p>2021年7月22日的线下麻将，让我重燃麻将瘾。然而至今不知道牌怎么摞，起章从哪拿这些国标麻将的内容。也就更不了解日麻怎么翻宝牌、怎么算番之类的。不过雀魂是实打实地玩起来了，在8月把四人和三人的等级都提升到雀杰，然后又看完了《魔女BLOG初中級日麻讲座（简中翻译第2版）》，于是又开小号希望能洗掉自己尴尬的失败率。然而自己毕竟实践不足经验欠缺，在牌桌上经常根据自己喜好对落单的单张牌随意摸切，不考虑牌河和牌效率，然后在几轮后摸到凑搭子的牌，只能扔进弃牌区望洋兴叹。</p>
+<p>原以为一个月的学习能让自己的水平有所提高，然而在8月22日的线下麻将中，依然感受到了自己水平的不足。虽说自己起手不如人，但是在自己多向听、且接近流局情况下仍不做防守，以至于我成了庄家轮转的推动者，确实是自己水平不足。</p>
+<p>线上麻将也不乐观，感觉现在雀魂低等级房间也是各路高手们在开小号互相比技巧，以至于我在银之间的小号成绩比在金之间的雀杰号更狼狈，更别说自己一局从领先第二名2万分，连续两个役満大铳被飞了，在有优势的情况下仍不收手，这是之前玩南风局就没改正的坏习惯。</p>
 <!-- more -->
-<p>  最近开始在B站搜索麻将的视频，原本是看各路神仙玩大牌的，实践中发现光起手我就难以匹及，最后还是科学麻将的一些教学更符合我的非酋特性。8月份开始补番《天才麻将少女》，到8月底补完第一季和阿知贺篇，全国篇也就看到前面几集。我觉得有必要给自己整理一份麻将教程，放在 <a href="https://92rw.github.io/post/Mahjong-Tutorials/">这篇文章</a>  里。</p>
-<p>  这一个月的时间内，晚上因为沉迷麻将疏于锻炼，养成了不好的习惯。总结了如上经历，我觉得像胡适那样沉迷打牌确实不好，写下这篇总结之后我要开始改变。因此决定自8月26日起，每天不再打雀魂，下班后的时间专注日语学习。当前的计划是年底前学完N1的考前对策，目前还有很多的书要看。</p>
-<p>（文章封面来自星野Poteto的教学视频）</p>
+<p>最近开始在B站搜索麻将的视频，原本是看各路神仙玩大牌的，实践中发现光起手我就难以匹及，最后还是科学麻将的一些教学更符合我的非酋特性。8月份开始补番《天才麻将少女》，到8月底补完第一季和阿知贺篇，全国篇也就看到前面几集。我觉得有必要给自己整理一份麻将教程，放在 <a href="https://92rw.github.io/post/Mahjong-Tutorials/">这篇文章</a>  里。</p>
+<p>这一个月的时间内，晚上因为沉迷麻将疏于锻炼，养成了不好的习惯。总结了如上经历，我觉得像胡适那样沉迷打牌确实不好，写下这篇总结之后我要开始改变。因此决定自8月26日起，每天不再打雀魂，下班后的时间专注日语学习。当前的计划是年底前学完N1的考前对策，目前还有很多的书要看。</p>
+<hr>
+<p>8月底的补充<br>
+8月27日和同事又有了一次线下麻将，然而麻将最终仍然是看运气的，更别说没有番数要求使得牌局变成了比速度的游戏😰还没轮到最后一摞牌堆就有人放铳或自摸。何况线下是投入真金白银的对局，不像游戏里只是四位率的增加而已。毕竟聚聚们的起手我就跟不上，被发牌姬针对的情况实在太多。</p>
 ]]></content>
     </entry>
     <entry>
@@ -91,26 +132,25 @@
         <id>https://92rw.github.io/post/Markdown-tutorial/</id>
         <link href="https://92rw.github.io/post/Markdown-tutorial/">
         </link>
-        <updated>2021-08-25T03:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>几年前看到有人推荐Markdown，然而并没有想着去学习。最近一接触才发现这确实是个非常好的工具，省下了很多和Word排版斗智斗勇的时间。然后又看到很多人推荐Notion、Typora，使用下来真的是方便了许多。个人于是整理了一些链接，方便日后找时间深入研究</p>
+        <updated>2021-08-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>几年前看到有人推荐Markdown，然而并没有想着去学习。最近一接触才发现这确实是个非常好的工具，省下了很多和Word排版斗智斗勇的时间。然后又看到很多人推荐Notion、Typora，使用下来真的是方便了许多。个人于是整理了一些链接，方便日后找时间深入研究。</p>
 <ul>
 <li>
-<p>Markdown教程<br>
+<p>Markdown语法教程<br>
 <a href="https://xianbai.me/learn-md/index.html">语法入门教程</a><br>
 <a href="https://www.jianshu.com/p/db1d26af109d">比较详细的Markdown语法教程</a><br>
-<a href="https://www.runoob.com/markdown/md-advance.html">使用Markdown来画流程图的方法</a></p>
+<a href="https://www.runoob.com/markdown/md-advance.html">使用Markdown来画流程图的方法</a><br>
+<a href="https://itinerant.tistory.com/60">各种emoji表情的编号命名</a></p>
 </li>
 <li>
-<p>从零开始的教程<br>
+<p>笔记软件Notion教程<br>
 <a href="https://www.notion.so/Help-Support-Documentation-e040febf70a94950b8620e6f00005004">Notion英文教程</a><br>
 <a href="https://www.notion.so/Notion-64ab96a7fccf4d74b9a9a68b338bc501">Notion中文教程</a><br>
-<a href="https://www.notion.so/Notion-2f3c5b06b3ad406bad8cf065ed3cca7c">Notion 充电中心</a></p>
-</li>
-<li>
-<p>综合性教程<br>
+<a href="https://www.notion.so/Notion-2f3c5b06b3ad406bad8cf065ed3cca7c">Notion 充电中心</a><br>
 <a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
 </li>
 </ul>
+<p>才知道Github的很多说明文档就是用markdown写的，感觉错过了太多。</p>
 ]]></content>
     </entry>
     <entry>
@@ -118,19 +158,21 @@
         <id>https://92rw.github.io/post/about/</id>
         <link href="https://92rw.github.io/post/about/">
         </link>
-        <updated>2021-08-25T02:00:00.000Z</updated>
+        <updated>2021-08-24T23:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
 <p>原本只是想学一下markdown怎么写，没想到Github也能托管网址，于是开始尝试这种模式</p>
-<p>此网站根据Gridea创建，采用nexT主题，感谢诸多程序员大佬们的分享。</p>
+<p>此网站根据Gridea创建，采用fog主题，感谢诸多程序员大佬们的付出，让我可以专心内容整理。</p>
 <h2 id="博主是谁">👨‍💻 博主是谁</h2>
 <p>空闲时间不够充裕的社畜，从事和代码无关的职业</p>
 <h2 id="个人经历">⛹ 个人经历</h2>
-<p>曾经多次想学习代码，却又只是了解皮毛。被各种算法劝退</p>
-<h2 id="以后可能会发的内容">📬 以后可能会发的内容</h2>
-<p>学习心得</p>
+<p>既然把个人主页建立在一个程序员的网站上，我就大概介绍一下自己的代码经历吧。最早是初中时候接触pascal，然后发现自己数学逻辑能力不强，也没记住几行公示，就回归应试教育的做题路径去了。这段时期听说了易语言，也尝试过学习php建立个人网站，最后发现自己还是更沉迷其他东西，这种应用工具般的东西也就搁置一边去了。<br>
+大学的时候有C#课程，然而我总想着自己也不会从事相关工作，也没想过考个计算机二级证书，直到大三才直到程序员是本专业的翻倍收入，开始羡慕起他们的工作环境和配套设施。然而需要补足的功课过多，只能在图书馆找各种教程并花钱报了学习班。然而书本和实际应用差距依旧不小，想去leetcode刷题发现自己根本不知道如何求解、想看别人如何套用各种族库却对写好的源码前几十行一头雾水，感觉投入的时间根本不足回报。最后还是从事起了和大学专业相关的工作，不过是C盘多了几个jupyter nootbook的文件夹，装满了一堆工作用不上的内容。<br>
+工作中有各种报表要填写，自己一个个手动改不仅出错率高，而且重复劳动十分无趣。我开始尝试重新拾起手头的工具，尝试用程序简化自己的劳动内容，具体的经历写在这篇文章里。</p>
+<h2 id="建站目的">📬建站目的</h2>
+<p>当作学习心得笔记，方便日后重新查看</p>
 ]]></content>
     </entry>
 </feed>

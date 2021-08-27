@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-27T05:03:17.503Z</updated>
+    <updated>2021-08-27T07:13:46.793Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -11,11 +11,25 @@
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
     <entry>
-        <title type="html"><![CDATA[Github的踩坑记录]]></title>
-        <id>https://92rw.github.io/post/github-de-cai-keng-ji-lu/</id>
-        <link href="https://92rw.github.io/post/github-de-cai-keng-ji-lu/">
+        <title type="html"><![CDATA[查资源的网站]]></title>
+        <id>https://92rw.github.io/post/Resource-index/</id>
+        <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-27T03:57:40.000Z</updated>
+        <updated>2021-08-27T05:08:53.000Z</updated>
+        <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
+<p>#查电子书</p>
+<ul>
+<li><a href="https://libgen.is/">创世纪图书馆</a>：科学论文及书籍</li>
+<li><a href="https://www.jiumodiary.com/">鸠摩搜索</a>：搜索网盘上的书籍</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Github的使用小记]]></title>
+        <id>https://92rw.github.io/post/Github-beginner/</id>
+        <link href="https://92rw.github.io/post/Github-beginner/">
+        </link>
+        <updated>2021-08-27T02:57:40.000Z</updated>
         <content type="html"><![CDATA[<p>虽然暂时还没有考虑成为以代码为生，但是却早早注册了github帐号，但也只是拿这个网站当作下载优秀软件的工具和给优秀作者点赞的平台而已。今天在阮一峰的网络日志看到了<a href="https://www.ruanyifeng.com/blog/2021/08/best-note-taking-software-for-programmers.html">利用Github仓库作为笔记软件</a> 的方法，顿感Github能提供的功能比我想象的更多，可能有仔细读一读说明文档了。</p>
 <ul>
 <li>因为没有读过说明文档，把这整个github仓库设置为私密，导致这个网站无法登录😅</li>
@@ -28,7 +42,7 @@
         <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
         <link href="https://92rw.github.io/post/Mahjong-Tutorials/">
         </link>
-        <updated>2021-08-25T22:00:00.000Z</updated>
+        <updated>2021-08-25T21:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>  之前在文章<a href="https://92rw.github.io/post/Mahjong-experience/">《我的麻将经历》</a>里介绍了一点自己和麻将的故事，然而自己的实践确实比不过大数据分析下的牌谱经验。麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
 <p>感觉有一些麻将资料值得多看几遍，至少要给自己点信心。</p>
 <ol>
@@ -45,7 +59,10 @@
 <a href="https://www.bilibili.com/read/readlist/rl398453">B站连载《麻将技术教科书：不会放铳的打法》</a><br>
 <a href="https://space.bilibili.com/680263/article">B站up主SonicFantasia介绍日麻规则及《天才麻将少女》中的规则介绍</a></p>
 </li>
-<li></li>
+<li>
+<p>日文教程<br>
+<a href="http://mjall.jp/t0001/">麻将役牌介绍</a> 这个网站也有从零开始的文字教程</p>
+</li>
 </ol>
 ]]></content>
     </entry>
@@ -54,7 +71,7 @@
         <id>https://92rw.github.io/post/Mahjong-experience/</id>
         <link href="https://92rw.github.io/post/Mahjong-experience/">
         </link>
-        <updated>2021-08-25T12:00:00.000Z</updated>
+        <updated>2021-08-25T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>  一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>  一直觉得麻将牌相互碰撞的声音十分悦耳，在大学之前却没多少机会实操上手，直到大学期间随大流接触了《雀魂》游戏。原本以为多打几局就能迅速上手，结果一方面自己沉迷断幺九浪费大量时间，另一方面被各种概率下的骚操作虐到怀疑人生，技术也未曾有多大长进。之后也就没什么机会接触雀魂了，只觉得那东西是消磨时间的一种方式而已。毕业之后也没怎么接触麻将，在2020年和同事组过雀魂友人局，2021年过年期间和同事打过线下麻将（屁胡），一共没玩多长时间。</p>
@@ -65,26 +82,7 @@
 <!-- more -->
 <p>  最近开始在B站搜索麻将的视频，原本是看各路神仙玩大牌的，实践中发现光起手我就难以匹及，最后还是科学麻将的一些教学更符合我的非酋特性。8月份开始补番《天才麻将少女》，到8月底补完第一季和阿知贺篇，全国篇也就看到前面几集。我觉得有必要给自己整理一份麻将教程，放在 <a href="https://92rw.github.io/post/Mahjong-Tutorials/">这篇文章</a>  里。</p>
 <p>  这一个月的时间内，晚上因为沉迷麻将疏于锻炼，养成了不好的习惯。总结了如上经历，我觉得像胡适那样沉迷打牌确实不好，写下这篇总结之后我要开始改变。因此决定自8月26日起，每天不再打雀魂，下班后的时间专注日语学习。当前的计划是年底前学完N1的考前对策，目前还有很多的书要看。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[建站感言]]></title>
-        <id>https://92rw.github.io/post/about/</id>
-        <link href="https://92rw.github.io/post/about/">
-        </link>
-        <updated>2021-08-25T08:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>原本只是想学一下markdown怎么写，没想到Github也能托管网址，于是开始尝试这种模式</p>
-<p>此网站根据Gridea创建，采用nexT主题，感谢诸多程序员大佬们的分享。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>空闲时间不够充裕的社畜，从事和代码无关的职业</p>
-<h2 id="个人经历">⛹ 个人经历</h2>
-<p>曾经多次想学习代码，却又只是了解皮毛。被各种算法劝退</p>
-<h2 id="以后可能会发的内容">📬 以后可能会发的内容</h2>
-<p>学习心得</p>
+<p>（文章封面来自星野Poteto的教学视频）</p>
 ]]></content>
     </entry>
     <entry>
@@ -112,6 +110,26 @@
 <a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
 </li>
 </ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[建站感言]]></title>
+        <id>https://92rw.github.io/post/about/</id>
+        <link href="https://92rw.github.io/post/about/">
+        </link>
+        <updated>2021-08-25T06:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="关于本站">🏠 关于本站</h2>
+<p>原本只是想学一下markdown怎么写，没想到Github也能托管网址，于是开始尝试这种模式</p>
+<p>此网站根据Gridea创建，采用nexT主题，感谢诸多程序员大佬们的分享。</p>
+<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<p>空闲时间不够充裕的社畜，从事和代码无关的职业</p>
+<h2 id="个人经历">⛹ 个人经历</h2>
+<p>曾经多次想学习代码，却又只是了解皮毛。被各种算法劝退</p>
+<h2 id="以后可能会发的内容">📬 以后可能会发的内容</h2>
+<p>学习心得</p>
 ]]></content>
     </entry>
 </feed>

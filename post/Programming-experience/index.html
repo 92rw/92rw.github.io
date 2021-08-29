@@ -2,10 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="图片一直是一个困扰人的难题，毕竟每次的尺寸不一致，要让图片被程序自动裁剪的话总会有问题出现。程序处理纯文字性的东西处理起来还算简单，有了图片就免不了人工干预的步骤了。
-Office的工具使用
-邮件合并填Word表格
-Office自带的邮件合..." />
+    <meta name="description" content="首先得从Jupyter Notebook说明开始，毕竟Python程序只能完整执行，但是这个却可以分步骤加载，而且使用快捷键十分方便。写好的程序已上传到我的Github仓库里。
+图片OCR
+目前汉字和英文使用天若OCR文字识别，但是其他语言..." />
     <meta name="keywords" content="建筑工程,代码" />
     <link rel="stylesheet" href="https://92rw.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://92rw.github.io/styles/main.css">
@@ -260,7 +259,7 @@ Office自带的邮件合..." />
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630085320445" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630250760851" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -461,14 +460,21 @@ Office自带的邮件合..." />
     <div id="side-posttitle" style="display: none;">
     
     
-    CAD和BIM的操作笔记
+    软件清单备份
     <script>
         postsnum += 1
     </script>
     
     
     
-    用程序简化工作内容
+    Office操作笔记
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    CAD和BIM的操作笔记
     <script>
         postsnum += 1
     </script>
@@ -483,6 +489,13 @@ Office自带的邮件合..." />
     
     
     Github的使用小记
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    用程序简化工作内容
     <script>
         postsnum += 1
     </script>
@@ -514,8 +527,6 @@ Office自带的邮件合..." />
     <script>
         postsnum += 1
     </script>
-    
-    
     
     
     </div>
@@ -1009,7 +1020,7 @@ menulist.eq(i).show();
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
                     
                     <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
@@ -1032,43 +1043,14 @@ menulist.eq(i).show();
                 
             </div>
             <div class="text ">
-                <p>图片一直是一个困扰人的难题，毕竟每次的尺寸不一致，要让图片被程序自动裁剪的话总会有问题出现。程序处理纯文字性的东西处理起来还算简单，有了图片就免不了人工干预的步骤了。</p>
-<h1 id="office的工具使用">Office的工具使用</h1>
-<h2 id="邮件合并填word表格">邮件合并填Word表格</h2>
-<p>Office自带的邮件合并功能确实更好用，因其可视化程度高而胜过python。<br>
-工作步骤：</p>
-<ul>
-<li>检查确保Excel首行为标题字段</li>
-<li>调整好Word格式后，点击上方“邮件”选项卡
-<ul>
-<li>“开始邮件合并”→“邮件合并分步向导”，点击“下一步：开始文档”</li>
-<li>选中“使用当前文档”，点击“下一步：选中收件人”</li>
-<li>选中“使用现有列表”，点击“浏览”导入Excel中对应工作表，点击“下一步：撰写信函”</li>
-<li>鼠标选择填写数据的位置，点击右侧导航栏“其他项目”，选择对应标题字段，点击“下一步：预览信函”</li>
-<li>确认合并情况无误，点击“下一步：完成合并”</li>
-<li>点击“编辑单个信函”，根据需要选择范围</li>
-</ul>
-</li>
-</ul>
-<p>如果希望插入图片</p>
-<ol>
-<li>在Excel中标记图片地址，注意<code>\</code>应写为<code>\\</code></li>
-<li>在Word点击上方“插入”选项卡，选择右侧“文档部件”</li>
-<li>选择“域”后左侧菜单选“IncludePicture”，域属性输入“其他”</li>
-<li>选中新增的内容，按<code>Alt+F9</code>，将“其他”替换为“邮件”选项卡中“插入合并域”的内容</li>
-<li>若依旧没有显示，全选后按<code>F9</code>即可</li>
-</ol>
-<p>如果希望将做好后的部分分拆至不同文件：</p>
-<ol>
-<li>点击上方“引用”选项卡，选择左侧“添加文字”为1级</li>
-<li>点击上方“视图”选项卡，选择左侧“大纲”，在“显示级别”下拉菜单选择“1级”</li>
-<li>按住键盘Shift键将其全选，点击“显示文档”全选后点击“创建”</li>
-<li>将文件另存为，将得到独立文件`</li>
-</ol>
-<h2 id="excel-的冻结窗格">Excel 的冻结窗格</h2>
-<p>点击上方“视图”选项卡，点击“拆分”将十字线定位后选择“冻结窗格”</p>
-<h1 id="python实现的功能">Python实现的功能</h1>
-<p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性</p>
+                <p>首先得从<a href="https://xugaoxiang.com/2020/10/28/jupyter-notebook/">Jupyter Notebook说明</a>开始，毕竟Python程序只能完整执行，但是这个却可以分步骤加载，而且使用<a href="https://zhuanlan.zhihu.com/p/100020058">快捷键</a>十分方便。写好的程序已上传到<a href="https://github.com/92rw/Office-tools">我的Github仓库</a>里。</p>
+<h2 id="图片ocr">图片OCR</h2>
+<p>目前汉字和英文使用天若OCR文字识别，但是其他语言却并没有那么方便。重命名文件也直接用FreeRename可视化操作，所以很多python简单教程里面的内容我都跳过了。然而其他外语的OCR却并非易事。<br>
+半年前第一次接触<a href="https://github.com/JaidedAI/EasyOCR">EasyOCR</a>，然而那会甚至连pip安装都不知道，只能找个OCR网站一个个导入图片再下载。现在写了个小程序可以直接离线OCR，十分方便。</p>
+<p>这个程序的不足之处：原本是带着文字位置一起OCR的，现在只剩下一个个文字块。因此遇到跨行的文字，常常对应不上，也就只能省下来一个个查字母表打字的过程，对于大规模开展工作还是不够适用。</p>
+<h2 id="便捷式填表">便捷式填表</h2>
+<p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性。<br>
+2020年8月的时候第一次用xlwings来写这种填表，到2021年的8月才想着把这个上传到github上存档。不仅发现自己当时没写说明文档导致自己记忆里完成的东西和实际有偏差，而且发现自己这几天想到的程序创意去年早就实践过了，看来程序也是一段时间不写就会忘，</p>
 
             </div>
             <hr style="width: 80%;">
@@ -1110,29 +1092,29 @@ menulist.eq(i).show();
             
         <div id="otherpost">
             
-            <a  data-pjax class="prev-post-pc" href="https://92rw.github.io/post/CAD-Memorandum/"  style="color: black;">
+            <a  data-pjax class="prev-post-pc" href="https://92rw.github.io/post/Github-beginner/"  style="color: black;">
                 <div id="ppcontainer">
                     
-                    <img src="https://92rw.github.io/post-images/CAD-Memorandum.png" style="width: 100%;" class="opimg">
+                    <img src="https://92rw.github.io/post-images/Github-beginner.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">CAD和BIM的操作笔记</h4>
+                    <h4 class="optitle">Github的使用小记</h4>
                 </div>
             </a>
             <div class="prev-post">
-                上一篇 <a  data-pjax href="https://92rw.github.io/post/CAD-Memorandum/">CAD和BIM的操作笔记</a>
+                上一篇 <a  data-pjax href="https://92rw.github.io/post/Github-beginner/">Github的使用小记</a>
             </div>
             
             
-            <a data-pjax class="next-post-pc" href="https://92rw.github.io/post/Resource-index/"  style="color: black;">
+            <a data-pjax class="next-post-pc" href="https://92rw.github.io/post/Mahjong-Tutorials/"  style="color: black;">
                 <div id="npcontainer">
                     
-                    <img src="https://92rw.github.io/post-images/Resource-index.webp" style="width: 100%;" class="opimg">
+                    <img src="https://92rw.github.io/post-images/Mahjong-Tutorials.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">查资源的网站</h4>
+                    <h4 class="optitle">个人收集到的麻将教程</h4>
                 </div>
             </a>
             <div class="next-post">
-                下一篇 <a  data-pjax href="https://92rw.github.io/post/Resource-index/">查资源的网站</a>
+                下一篇 <a  data-pjax href="https://92rw.github.io/post/Mahjong-Tutorials/">个人收集到的麻将教程</a>
             </div>
             
         </div>
@@ -1153,13 +1135,12 @@ menulist.eq(i).show();
 </script>
                     <div class="toc-container">
                         <ul class="markdownIt-TOC">
-<li><a href="#office%E7%9A%84%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8">Office的工具使用</a>
+<li>
 <ul>
-<li><a href="#%E9%82%AE%E4%BB%B6%E5%90%88%E5%B9%B6%E5%A1%ABword%E8%A1%A8%E6%A0%BC">邮件合并填Word表格</a></li>
-<li><a href="#excel-%E7%9A%84%E5%86%BB%E7%BB%93%E7%AA%97%E6%A0%BC">Excel 的冻结窗格</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87ocr">图片OCR</a></li>
+<li><a href="#%E4%BE%BF%E6%8D%B7%E5%BC%8F%E5%A1%AB%E8%A1%A8">便捷式填表</a></li>
 </ul>
 </li>
-<li><a href="#python%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD">Python实现的功能</a></li>
 </ul>
 
                     </div>

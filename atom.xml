@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-27T17:28:49.160Z</updated>
+    <updated>2021-08-29T15:26:06.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -11,29 +11,189 @@
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
     <entry>
-        <title type="html"><![CDATA[CAD和BIM的操作笔记]]></title>
-        <id>https://92rw.github.io/post/CAD-Memorandum/</id>
-        <link href="https://92rw.github.io/post/CAD-Memorandum/">
+        <title type="html"><![CDATA[软件清单备份]]></title>
+        <id>https://92rw.github.io/post/Software-lists/</id>
+        <link href="https://92rw.github.io/post/Software-lists/">
         </link>
-        <updated>2021-08-27T06:46:26.000Z</updated>
-        <content type="html"><![CDATA[<p>从大学起AutoCAD和Revit就一直常驻电脑，然而很多时候还是感觉自己水平不够，需要时常学习。然而我又不是整天对着电脑画图，学完之后一段时间不用就忘了怎么操作。借此机会记录一些常用的操作，以便日后节省时间。</p>
-<h1 id="cad操作笔记">CAD操作笔记</h1>
-<h2 id="快捷键的使用">快捷键的使用</h2>
-<p><a href="https://www.autodesk.com.cn/shortcuts/autocad">官方文档</a>中列出了各种快捷键，但是我觉得平时常用的也就只是其中几个而已。</p>
-<h2 id="视口的使用">视口的使用</h2>
-<p>输入<code>mv</code>框选视口的范围，还可以设置其标注比例、限定显示的图层，对于按标准尺寸打印图纸十分有帮助。</p>
-<h1 id="revit操作笔记">Revit操作笔记</h1>
-<p>好久没用了，近期的工作内容和Revit的关系并不大，等以后有机会了再补充。</p>
+        <updated>2021-08-29T12:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>重装系统之后，需要装什么程序以恢复到原先的生产力水平？既然是个人主页，在此罗列一些我自己使用的软件清单，以便日后换机时能尽快恢复效率。大隐隐于市，其他还有哪些非用不可的程序，可能以后真到换机的时候才会察觉吧。</p>
+<h2 id="开机自启动">开机自启动</h2>
+<table>
+<thead>
+<tr>
+<th>软件名称</th>
+<th>实现功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bing Wallpaper</td>
+<td>自动换壁纸</td>
+<td></td>
+</tr>
+<tr>
+<td>天若OCR文字识别</td>
+<td>截图、OCR</td>
+<td>已注册付费会员</td>
+</tr>
+<tr>
+<td>便笺（Microsoft商店自带）</td>
+<td>提醒工作日程安排</td>
+<td></td>
+</tr>
+<tr>
+<td>Listary</td>
+<td>查找文件</td>
+<td>已注册付费会员</td>
+</tr>
+<tr>
+<td>小狼毫输入法</td>
+<td>输入中文</td>
+<td>需<a href="https://github.com/wongdean/rime-settings">配置输入法</a></td>
+</tr>
+<tr>
+<td>谷歌日文输入法</td>
+<td>输入日文</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="和工作相关">和工作相关</h2>
+<table>
+<thead>
+<tr>
+<th>实现功能</th>
+<th>软件1</th>
+<th>软件2</th>
+<th>配套工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>制作PPT，WORD，EXCEL</td>
+<td>Office 365</td>
+<td>WPS Office 2019 珠海市政府专业版(11.8.2.8506)</td>
+<td>iSlide，方方格子</td>
+</tr>
+<tr>
+<td>常见文件格式</td>
+<td>Acrobat</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>写程序</td>
+<td>Anaconda</td>
+<td>VScode</td>
+<td></td>
+</tr>
+<tr>
+<td>写工程报表</td>
+<td>筑业施工交底软件</td>
+<td>筑业云资料</td>
+<td></td>
+</tr>
+<tr>
+<td>工程画图软件</td>
+<td>AutoCAD2016</td>
+<td>Revit2018</td>
+<td>天正电气</td>
+</tr>
+<tr>
+<td>工程算量软件</td>
+<td>CAD快速看图</td>
+<td>算王</td>
+<td>E算量，算算量</td>
+</tr>
+<tr>
+<td>写笔记</td>
+<td>Typora</td>
+<td>Notion</td>
+<td></td>
+</tr>
+<tr>
+<td>下载软件</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>通讯软件</td>
+<td>QQ、微信</td>
+<td>Line</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="日常会使用到">日常会使用到</h2>
+<table>
+<thead>
+<tr>
+<th>实现功能</th>
+<th>软件1</th>
+<th>软件2</th>
+<th>配套工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图片后期处理</td>
+<td>Photoshop 2020</td>
+<td>Lightroom Classic</td>
+<td></td>
+</tr>
+<tr>
+<td>手机连电脑</td>
+<td>MIUI+</td>
+<td>Revit2018</td>
+<td>CAD快速看图</td>
+</tr>
+<tr>
+<td>听歌</td>
+<td>Spotify</td>
+<td>QQ音乐、网易云音乐</td>
+<td>Lyricify（搜索歌词）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="有用的小工具">有用的小工具</h2>
+<table>
+<thead>
+<tr>
+<th>软件名称</th>
+<th>实现功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bing Wallpaper</td>
+<td>自动换壁纸</td>
+<td></td>
+</tr>
+<tr>
+<td>天若OCR文字识别</td>
+<td>截图、OCR</td>
+<td>已注册付费会员</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chrome浏览器插件">Chrome浏览器插件</h2>
+<ul>
+<li>Adguard</li>
+<li>Fireshot</li>
+<li>划词翻译</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[用程序简化工作内容]]></title>
-        <id>https://92rw.github.io/post/Programming-experience/</id>
-        <link href="https://92rw.github.io/post/Programming-experience/">
+        <title type="html"><![CDATA[Office操作笔记]]></title>
+        <id>https://92rw.github.io/post/Office-learning/</id>
+        <link href="https://92rw.github.io/post/Office-learning/">
         </link>
-        <updated>2021-08-27T02:46:53.000Z</updated>
-        <content type="html"><![CDATA[<p>图片一直是一个困扰人的难题，毕竟每次的尺寸不一致，要让图片被程序自动裁剪的话总会有问题出现。程序处理纯文字性的东西处理起来还算简单，有了图片就免不了人工干预的步骤了。</p>
-<h1 id="office的工具使用">Office的工具使用</h1>
+        <updated>2021-08-27T22:09:40.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="office的工具使用">Office的工具使用</h1>
 <h2 id="邮件合并填word表格">邮件合并填Word表格</h2>
 <p>Office自带的邮件合并功能确实更好用，因其可视化程度高而胜过python。<br>
 工作步骤：</p>
@@ -54,8 +214,9 @@
 <ol>
 <li>在Excel中标记图片地址，注意<code>\</code>应写为<code>\\</code></li>
 <li>在Word点击上方“插入”选项卡，选择右侧“文档部件”</li>
-<li>选择“域”后左侧菜单选“IncludePicture”，域属性输入“其他”</li>
-<li>选中新增的内容，按<code>Alt+F9</code>，将“其他”替换为“邮件”选项卡中“插入合并域”的内容</li>
+<li>选择“域”后左侧菜单“连接和引用”中选择“IncludePicture”，域属性输入“其他”，（域选项勾选“未随文档存储的数据”）</li>
+<li>选中新增的内容，按<code>Alt+F9</code>，（选中“其他”，按<code>CTRL+F9</code>加入大括号，在前面输入<code>&quot;if true &quot;</code>）。将“其他”替换为“邮件”选项卡中“插入合并域”的内容<br>
+*</li>
 <li>若依旧没有显示，全选后按<code>F9</code>即可</li>
 </ol>
 <p>如果希望将做好后的部分分拆至不同文件：</p>
@@ -65,10 +226,36 @@
 <li>按住键盘Shift键将其全选，点击“显示文档”全选后点击“创建”</li>
 <li>将文件另存为，将得到独立文件`</li>
 </ol>
-<h2 id="excel-的冻结窗格">Excel 的冻结窗格</h2>
-<p>点击上方“视图”选项卡，点击“拆分”将十字线定位后选择“冻结窗格”</p>
-<h1 id="python实现的功能">Python实现的功能</h1>
-<p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性</p>
+<h2 id="excel-的功能">Excel 的功能</h2>
+<p>装了个叫“方方格子”的插件，从单元格里提取文字、数字十分方便。除此之外还有</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV184411C7Ci">Excel视频教程</a></li>
+<li>冻结窗格<br>
+点击上方“视图”选项卡，点击“拆分”将十字线定位后选择“冻结窗格”</li>
+<li>邮件合并<br>
+虽然openpyxl结合pandas能填表，但写程序毕竟话费时间。有个叫<a href="https://www.bilibili.com/video/BV1i54y1V7Ac">艾敦制表神器</a>的程序很管用。</li>
+</ul>
+<h2 id="酷炫ppt">酷炫PPT</h2>
+<p>以前还专门下载十几G的ppt素材，大部分都是只通过图片介绍预览了大致的界面。自从装了“iSlide”之后这一步也省了。</p>
+<ul>
+<li><strong>平滑过渡</strong> 在B站能找到关于这个的<a href="https://www.bilibili.com/video/BV1y54y1p7Pe">视频教程</a>，iSlide也能实现。但是我毕竟写ppt的机会很少，以后要有也是用统一模板，没有那么迫切的必要</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CAD和BIM的操作笔记]]></title>
+        <id>https://92rw.github.io/post/CAD-Memorandum/</id>
+        <link href="https://92rw.github.io/post/CAD-Memorandum/">
+        </link>
+        <updated>2021-08-27T06:46:26.000Z</updated>
+        <content type="html"><![CDATA[<p>从大学起AutoCAD和Revit就一直常驻电脑，然而很多时候还是感觉自己水平不够，需要时常学习。然而我又不是整天对着电脑画图，学完之后一段时间不用就忘了怎么操作。借此机会记录一些常用的操作，以便日后节省时间。</p>
+<h1 id="cad操作笔记">CAD操作笔记</h1>
+<h2 id="快捷键的使用">快捷键的使用</h2>
+<p><a href="https://www.autodesk.com.cn/shortcuts/autocad">官方文档</a>中列出了各种快捷键，但是我觉得平时常用的也就只是其中几个而已。</p>
+<h2 id="视口的使用">视口的使用</h2>
+<p>输入<code>mv</code>框选视口的范围，还可以设置其标注比例、限定显示的图层，对于按标准尺寸打印图纸十分有帮助。</p>
+<h1 id="revit操作笔记">Revit操作笔记</h1>
+<p>好久没用了，近期的工作内容和Revit的关系并不大，等以后有机会了再补充。</p>
 ]]></content>
     </entry>
     <entry>
@@ -111,12 +298,28 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[用程序简化工作内容]]></title>
+        <id>https://92rw.github.io/post/Programming-experience/</id>
+        <link href="https://92rw.github.io/post/Programming-experience/">
+        </link>
+        <updated>2021-08-26T19:46:53.000Z</updated>
+        <content type="html"><![CDATA[<p>首先得从<a href="https://xugaoxiang.com/2020/10/28/jupyter-notebook/">Jupyter Notebook说明</a>开始，毕竟Python程序只能完整执行，但是这个却可以分步骤加载，而且使用<a href="https://zhuanlan.zhihu.com/p/100020058">快捷键</a>十分方便。写好的程序已上传到<a href="https://github.com/92rw/Office-tools">我的Github仓库</a>里。</p>
+<h2 id="图片ocr">图片OCR</h2>
+<p>目前汉字和英文使用天若OCR文字识别，但是其他语言却并没有那么方便。重命名文件也直接用FreeRename可视化操作，所以很多python简单教程里面的内容我都跳过了。然而其他外语的OCR却并非易事。<br>
+半年前第一次接触<a href="https://github.com/JaidedAI/EasyOCR">EasyOCR</a>，然而那会甚至连pip安装都不知道，只能找个OCR网站一个个导入图片再下载。现在写了个小程序可以直接离线OCR，十分方便。</p>
+<p>这个程序的不足之处：原本是带着文字位置一起OCR的，现在只剩下一个个文字块。因此遇到跨行的文字，常常对应不上，也就只能省下来一个个查字母表打字的过程，对于大规模开展工作还是不够适用。</p>
+<h2 id="便捷式填表">便捷式填表</h2>
+<p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性。<br>
+2020年8月的时候第一次用xlwings来写这种填表，到2021年的8月才想着把这个上传到github上存档。不仅发现自己当时没写说明文档导致自己记忆里完成的东西和实际有偏差，而且发现自己这几天想到的程序创意去年早就实践过了，看来程序也是一段时间不写就会忘，</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[个人收集到的麻将教程]]></title>
         <id>https://92rw.github.io/post/Mahjong-Tutorials/</id>
         <link href="https://92rw.github.io/post/Mahjong-Tutorials/">
         </link>
-        <updated>2021-08-25T17:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>  之前在文章<a href="https://92rw.github.io/post/Mahjong-experience/">《我的麻将经历》</a>里介绍了一点自己和麻将的故事，然而自己的实践确实比不过大数据分析下的牌谱经验。麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
+        <updated>2021-08-25T14:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>之前在文章<a href="https://92rw.github.io/post/Mahjong-experience/">《我的麻将经历》</a>里介绍了一点自己和麻将的故事，然而自己的实践确实比不过大数据分析下的牌谱经验。麻将有一个好处，牌打错了可以选择流局放弃和牌，每一局的持续时间也不长，对于前期不注重算分只想着和牌的新手，意味着试错成本很低。但是线上麻将无法保证自己匹配到的是计算得失的高手，被新手乱打和大牌确实是一件让人沮丧的事情。这种情况下实践不如科学麻将总结到位。</p>
 <p>感觉有一些麻将资料值得多看几遍，至少要给自己点信心。</p>
 <ol>
 <li>
@@ -135,6 +338,12 @@
 <li>
 <p>日文教程<br>
 <a href="http://mjall.jp/t0001/">麻将役牌介绍</a> 这个网站也有从零开始的文字教程</p>
+</li>
+<li>
+<p>边打边学：Github上面也有一些分析牌效率的开源程序，罗列几款<br>
+<a href="https://github.com/zyr17/MajsoulPaipuAnalyzer">获取近期的牌谱并计算得失分情况</a><br>
+<a href="https://github.com/EndlessCheng/mahjong-helper">实时计算应该摸切哪张牌</a><br>
+<a href="https://github.com/moxcomic/MajsoulAI">AI自动打麻将</a></p>
 </li>
 </ol>
 ]]></content>
@@ -165,7 +374,7 @@
         <id>https://92rw.github.io/post/Markdown-tutorial/</id>
         <link href="https://92rw.github.io/post/Markdown-tutorial/">
         </link>
-        <updated>2021-08-25T00:00:00.000Z</updated>
+        <updated>2021-08-24T23:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>几年前看到有人推荐Markdown，然而并没有想着去学习。最近一接触才发现这确实是个非常好的工具，省下了很多和Word排版斗智斗勇的时间。然后又看到很多人推荐Notion、Typora，使用下来真的是方便了许多。个人于是整理了一些链接，方便日后找时间深入研究。</p>
 <ul>
 <li>
@@ -173,6 +382,7 @@
 <a href="https://xianbai.me/learn-md/index.html">语法入门教程</a><br>
 <a href="https://www.jianshu.com/p/db1d26af109d">比较详细的Markdown语法教程</a><br>
 <a href="https://www.runoob.com/markdown/md-advance.html">使用Markdown来画流程图的方法</a><br>
+<a href="https://madmaxchow.github.io/VLOOK/chart.html">Markdown绘制流程图方法2</a><br>
 <a href="https://itinerant.tistory.com/60">各种emoji表情的编号命名</a></p>
 </li>
 <li>
@@ -183,7 +393,10 @@
 <a href="https://www.notion.so/Notion-054e065841894c4e8852afd629c9fbdc">Notion 教程中心</a></p>
 </li>
 </ul>
-<p>才知道Github的很多说明文档就是用markdown写的，感觉错过了太多。</p>
+<p>*Typora的增强插件VLOOK<br>
+<a href="https://github.com/MadMaxChow/VLOOK">Github页面</a><br>
+<a href="https://madmaxchow.github.io/VLOOK/index.html">使用说明</a><br>
+才知道Github的很多说明文档就是用markdown写的，感觉错过了太多。</p>
 ]]></content>
     </entry>
     <entry>
@@ -191,7 +404,7 @@
         <id>https://92rw.github.io/post/about/</id>
         <link href="https://92rw.github.io/post/about/">
         </link>
-        <updated>2021-08-24T21:00:00.000Z</updated>
+        <updated>2021-08-24T20:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>👏  欢迎来到我的小站呀，很高兴遇见你！🤝<br>
 🏷️  这个网站使用静态博客写作客户端<strong>Gridea</strong>创立。你可以用它来记录生活📝、心情💬、知识✍️、笔记📋、创意💻……</p>

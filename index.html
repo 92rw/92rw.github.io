@@ -93,7 +93,7 @@
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630250760851" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630513311582" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -113,7 +113,10 @@
         </div>
         
     <div class="share-button">
-        <span></span>
+        <span>个人链接</span>
+        
+        <a href="https://github.com/92rw/Office-tools" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://92rw.github.io/media/images/github.png" alt=""></i></a>
         
         
         
@@ -166,6 +169,12 @@
 
         
         
+            <div class="mchocie description">
+                <a data-pjax href="https://92rw.github.io/bber" class="menubutton" style="margin-right: 15px;">
+                    <i><img class="icon menuicon" src="" alt="哔哔"></i>&nbsp;<span data-text="哔哔">哔哔</span>
+                </a>
+            </div>
+        
         
         <div class="mchocie description">
             <a data-pjax href="https://92rw.github.io/friends" class="menubutton" style="margin-right: 15px;">
@@ -173,13 +182,7 @@
             </a>
         </div>
         
-        <!-- 
-        <div class="mchocie description">
-            <a data-pjax href="#terrestrial" id="fog_go" class="open-popup menubutton" style="margin-right: 15px;">
-                    <i><img class="icon menuicon" src="" alt="御风飞行"></i>&nbsp;<span data-text="御风飞行">御风飞行</span>
-            </a>
-        </div>
-         -->
+        <!--  -->
     </div>
     <!------------ 加载菜单按钮👆 ------------------------->
     <hr>
@@ -210,11 +213,15 @@
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">08/25/2021</div>
+                
             </div>
             <div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2021
             </div>
         </div>
 
@@ -222,6 +229,38 @@
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 
@@ -932,6 +971,8 @@ menulist.eq(i).show();
         
         
         
+          <li><a data-pjax href="https://92rw.github.io/bber">哔哔</a></li>
+          
           
         <li><a data-pjax href="https://92rw.github.io/friends">友链</a></li>
 
@@ -979,7 +1020,7 @@ menulist.eq(i).show();
                         <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://92rw.github.io/images/avatar.png?v=1630250760851" class="avatar">
+        <img src="https://92rw.github.io/images/avatar.png?v=1630513311582" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
@@ -1059,7 +1100,7 @@ menulist.eq(i).show();
     if(bgchoice=='default')
         var plbgurl = ""
     else  
-        var plbgurl = ""
+        var plbgurl = "https://cn.bing.com/th?id=OHR.TokyoMetropolis_EN-US9112375652_UHD.jpg"
     $(".plbg").attr("src",plbgurl);
     $(".plbg").fadeIn(200);
 </script>
@@ -1074,8 +1115,8 @@ menulist.eq(i).show();
                 curpath += '/'
             valine.init({
                 el: '#vcomments',
-                appId: '',
-                appKey: '',
+                appId: '9N54CMIDTo3FMMd1xqq7Qtem-gzGzoHsz',
+                appKey: 'eGu41NtLWhPmQHcKcbYipBUD',
                 notify: true,
                 verify: false,
                 avatar: 'retro',
@@ -1098,277 +1139,250 @@ menulist.eq(i).show();
                     <link rel="stylesheet" href="https://92rw.github.io/media/css/font-awesome.css">
 
 
-<div id="post-container">
+    <div style="display: none;">
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Software-lists.jpg</span>
+                
+            <span name="pltitle">软件清单备份</span>
+            <span name="pllink">https://92rw.github.io/post/Software-lists/</span>
+            <span name="pldate">2021-08-29</span>
+            <span name="plstats">2 min read</span>
+            
+                <span name="pltag" alt="软件清单备份">万花镜</span>
+                <span name="pltaglink" alt="软件清单备份">https://92rw.github.io/tag/C0uLWlQZz/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Office-learning.jpg</span>
+                
+            <span name="pltitle">Office操作笔记</span>
+            <span name="pllink">https://92rw.github.io/post/Office-learning/</span>
+            <span name="pldate">2021-08-28</span>
+            <span name="plstats">3 min read</span>
+            
+                <span name="pltag" alt="Office操作笔记">建筑工程</span>
+                <span name="pltaglink" alt="Office操作笔记">https://92rw.github.io/tag/UNLjgEJQs/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/CAD-Memorandum.png</span>
+                
+            <span name="pltitle">CAD和BIM的操作笔记</span>
+            <span name="pllink">https://92rw.github.io/post/CAD-Memorandum/</span>
+            <span name="pldate">2021-08-27</span>
+            <span name="plstats">2 min read</span>
+            
+                <span name="pltag" alt="CAD和BIM的操作笔记">建筑工程</span>
+                <span name="pltaglink" alt="CAD和BIM的操作笔记">https://92rw.github.io/tag/UNLjgEJQs/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Resource-index.webp</span>
+                
+            <span name="pltitle">查资源的网站</span>
+            <span name="pllink">https://92rw.github.io/post/Resource-index/</span>
+            <span name="pldate">2021-08-27</span>
+            <span name="plstats">1 min read</span>
+            
+                <span name="pltag" alt="查资源的网站">万花镜</span>
+                <span name="pltaglink" alt="查资源的网站">https://92rw.github.io/tag/C0uLWlQZz/</span>
+            
+                <span name="pltag" alt="查资源的网站">建筑工程</span>
+                <span name="pltaglink" alt="查资源的网站">https://92rw.github.io/tag/UNLjgEJQs/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Github-beginner.png</span>
+                
+            <span name="pltitle">Github的使用小记</span>
+            <span name="pllink">https://92rw.github.io/post/Github-beginner/</span>
+            <span name="pldate">2021-08-27</span>
+            <span name="plstats">1 min read</span>
+            
+                <span name="pltag" alt="Github的使用小记">代码</span>
+                <span name="pltaglink" alt="Github的使用小记">https://92rw.github.io/tag/OMQToiQbf/</span>
+            
+                <span name="pltag" alt="Github的使用小记">Markdown</span>
+                <span name="pltaglink" alt="Github的使用小记">https://92rw.github.io/tag/1zePKEQ4A/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Programming-experience.png</span>
+                
+            <span name="pltitle">用程序简化工作内容</span>
+            <span name="pllink">https://92rw.github.io/post/Programming-experience/</span>
+            <span name="pldate">2021-08-27</span>
+            <span name="plstats">2 min read</span>
+            
+                <span name="pltag" alt="用程序简化工作内容">建筑工程</span>
+                <span name="pltaglink" alt="用程序简化工作内容">https://92rw.github.io/tag/UNLjgEJQs/</span>
+            
+                <span name="pltag" alt="用程序简化工作内容">代码</span>
+                <span name="pltaglink" alt="用程序简化工作内容">https://92rw.github.io/tag/OMQToiQbf/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Mahjong-Tutorials.png</span>
+                
+            <span name="pltitle">个人收集到的麻将教程</span>
+            <span name="pllink">https://92rw.github.io/post/Mahjong-Tutorials/</span>
+            <span name="pldate">2021-08-25</span>
+            <span name="plstats">2 min read</span>
+            
+                <span name="pltag" alt="个人收集到的麻将教程">麻将</span>
+                <span name="pltaglink" alt="个人收集到的麻将教程">https://92rw.github.io/tag/ly3wT2msV/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Mahjong-experience.png</span>
+                
+            <span name="pltitle">我的麻将经历</span>
+            <span name="pllink">https://92rw.github.io/post/Mahjong-experience/</span>
+            <span name="pldate">2021-08-25</span>
+            <span name="plstats">4 min read</span>
+            
+                <span name="pltag" alt="我的麻将经历">麻将</span>
+                <span name="pltaglink" alt="我的麻将经历">https://92rw.github.io/tag/ly3wT2msV/</span>
+            
+        
+            
+                <span name="plfeature">https://92rw.github.io/post-images/Markdown-tutorial.png</span>
+                
+            <span name="pltitle">Markdown是一个好东西</span>
+            <span name="pllink">https://92rw.github.io/post/Markdown-tutorial/</span>
+            <span name="pldate">2021-08-25</span>
+            <span name="plstats">1 min read</span>
+            
+                <span name="pltag" alt="Markdown是一个好东西">Markdown</span>
+                <span name="pltaglink" alt="Markdown是一个好东西">https://92rw.github.io/tag/1zePKEQ4A/</span>
+            
+        
+            
+                <span name="plfeature">https://coolbackgrounds.io/images/unsplash/ashim-d-silva-medium-ed909940.jpg</span>
+                
+            <span name="pltitle">建站感言</span>
+            <span name="pllink">https://92rw.github.io/post/about/</span>
+            <span name="pldate">2021-08-25</span>
+            <span name="plstats">3 min read</span>
+            
+        
+    </div>
+
     
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Software-lists/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Software-lists.jpg" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        软件清单备份
+    <div id="post-container" class="eleg-allpostscontainer">
+        <div v-for="post in postinfo" class="eleg-posts">
+            <div v-if="post.elegcontainer=='eleg-postcontainer-left'">
+                    <div :class="post.elegcontainer">
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                        
+                        <img class="eleg-swordsmen-left" src="https://92rw.github.io/media/images/swordsmenleft.webp" alt="">
+                        
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class='eleg-tags'>
+                        <div v-for="(tag,i) in post.tags">
+                            <div class="posttag">
+                                <a data-pjax :href="post.taglink[i]" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-29</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/C0uLWlQZz/" class="postlink">
-                    <i class="fa fa-tag"></i> 万花镜
-                </a>
-                
+            <div v-else>
+                    <div :class="post.elegcontainer">
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <img class="eleg-swordsmen" src="https://92rw.github.io/media/images/swordsmen.webp" alt="">
+                        
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                    </div>
+                    <div class='eleg-tags'>
+                        <div v-for="(tag,i) in post.tags">
+                            <div class="posttag">
+                                <a data-pjax :href="post.taglink[i]" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
-        
-</div>
+    </div>
 
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Office-learning/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Office-learning.jpg" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        Office操作笔记
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-28</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
-                    <i class="fa fa-tag"></i> 建筑工程
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/CAD-Memorandum/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/CAD-Memorandum.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        CAD和BIM的操作笔记
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
-                    <i class="fa fa-tag"></i> 建筑工程
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Resource-index/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Resource-index.webp" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        查资源的网站
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/C0uLWlQZz/" class="postlink">
-                    <i class="fa fa-tag"></i> 万花镜
-                </a>
-                
-                <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
-                    <i class="fa fa-tag"></i> 建筑工程
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Github-beginner/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Github-beginner.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        Github的使用小记
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/OMQToiQbf/" class="postlink">
-                    <i class="fa fa-tag"></i> 代码
-                </a>
-                
-                <a data-pjax href="https://92rw.github.io/tag/1zePKEQ4A/" class="postlink">
-                    <i class="fa fa-tag"></i> Markdown
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Programming-experience/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Programming-experience.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        用程序简化工作内容
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
-                    <i class="fa fa-tag"></i> 建筑工程
-                </a>
-                
-                <a data-pjax href="https://92rw.github.io/tag/OMQToiQbf/" class="postlink">
-                    <i class="fa fa-tag"></i> 代码
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Mahjong-Tutorials/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Mahjong-Tutorials.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        个人收集到的麻将教程
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/ly3wT2msV/" class="postlink">
-                    <i class="fa fa-tag"></i> 麻将
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Mahjong-experience/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Mahjong-experience.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        我的麻将经历
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/ly3wT2msV/" class="postlink">
-                    <i class="fa fa-tag"></i> 麻将
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/Markdown-tutorial/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://92rw.github.io/post-images/Markdown-tutorial.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        Markdown是一个好东西
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://92rw.github.io/tag/1zePKEQ4A/" class="postlink">
-                    <i class="fa fa-tag"></i> Markdown
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://92rw.github.io/post/about/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://coolbackgrounds.io/images/unsplash/ashim-d-silva-medium-ed909940.jpg" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        建站感言
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2021-08-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
-            <div class="posttag">
-                
-            </div>
-        </div>
-        
-</div>
-
-</div>
+    
+    <script>
+    var app2 = new Vue({
+      el: '#post-container',
+      mounted:function(){
+        this.getpostInfo();
+      },
+      methods:{
+         getpostInfo:function(){
+             var plflist = $("span[name='plfeature']");
+             var pltlist = $("span[name='pltitle']");
+             var plllist = $("span[name='pllink']");
+             var pldlist = $("span[name='pldate']");
+             var plslist = $("span[name='plstats']");
+             var pltaglist = $("span[name='pltag']");
+             var pltaglinklist = $("span[name='pltaglink']")
+             for(var i=0;i<this.pagesize&&i<plflist.length;i++){
+                 var d = {};
+                 var tags = []
+                 var taglink = []
+                 d["feature"] = plflist.eq(i).html();
+                 d["title"] = pltlist.eq(i).html();
+                 d["link"] = plllist.eq(i).html();
+                 d["date"] = pldlist.eq(i).html();
+                 d['stats'] = plslist.eq(i).html();
+                 for(var j=0;j<pltaglist.length;j++){
+                     if(pltaglist.eq(j).attr('alt')==d['title'])
+                        tags.push(pltaglist.eq(j).html())
+                 }
+                 d["tags"] = tags;
+                 for(var j=0;j<pltaglinklist.length;j++){
+                    if(pltaglinklist.eq(j).attr('alt')==d['title'])
+                        taglink.push(pltaglinklist.eq(j).html())
+                 }
+                 d["taglink"] = taglink
+                 if(i%2==0)
+                 {
+                     d['elegcontainer'] = 'eleg-postcontainer-left';
+                     d['imgclass'] = 'eleg-img-left'
+                 }
+                 else{
+                    d['elegcontainer'] = 'eleg-postcontainer-right';
+                    d['imgclass'] = 'eleg-img-right' 
+                 }
+                 this.postinfo.push(d);
+             }
+         }
+      },
+      data: {
+        pagesize: "15",
+        postinfo:[],
+      }
+    })
+    </script>
 
 
                     <div>

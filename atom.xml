@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-08-29T15:26:06.830Z</updated>
+    <updated>2021-09-01T16:33:49.027Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -247,13 +247,24 @@
         <id>https://92rw.github.io/post/CAD-Memorandum/</id>
         <link href="https://92rw.github.io/post/CAD-Memorandum/">
         </link>
-        <updated>2021-08-27T06:46:26.000Z</updated>
+        <updated>2021-08-27T05:46:26.000Z</updated>
         <content type="html"><![CDATA[<p>从大学起AutoCAD和Revit就一直常驻电脑，然而很多时候还是感觉自己水平不够，需要时常学习。然而我又不是整天对着电脑画图，学完之后一段时间不用就忘了怎么操作。借此机会记录一些常用的操作，以便日后节省时间。</p>
 <h1 id="cad操作笔记">CAD操作笔记</h1>
 <h2 id="快捷键的使用">快捷键的使用</h2>
 <p><a href="https://www.autodesk.com.cn/shortcuts/autocad">官方文档</a>中列出了各种快捷键，但是我觉得平时常用的也就只是其中几个而已。</p>
 <h2 id="视口的使用">视口的使用</h2>
 <p>输入<code>mv</code>框选视口的范围，还可以设置其标注比例、限定显示的图层，对于按标准尺寸打印图纸十分有帮助。</p>
+<blockquote>
+<p>laymcur设定为当前图层<br>
+v视口编辑器<br>
+mv新建视口<br>
+rec添加矩形<br>
+layer隐藏不必要图层<br>
+MV-LO-ON锁住视口<br>
+MV-LO-OFF打开视口<br>
+“layvpi+回车”就是在当前视口之外的其它所有视口冻结当前选择对象所在的图层。<br>
+“layfrz+回车”就是在当在当前视口冻结选择对象所在的图层。</p>
+</blockquote>
 <h1 id="revit操作笔记">Revit操作笔记</h1>
 <p>好久没用了，近期的工作内容和Revit的关系并不大，等以后有机会了再补充。</p>
 ]]></content>
@@ -263,12 +274,13 @@
         <id>https://92rw.github.io/post/Resource-index/</id>
         <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-26T23:00:00.000Z</updated>
+        <updated>2021-08-26T22:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
 <h2 id="查电子书">查电子书</h2>
 <ul>
 <li><a href="https://libgen.is/">创世纪图书馆</a>：科学论文及书籍</li>
 <li><a href="https://www.jiumodiary.com/">鸠摩搜索</a>：搜索网盘上的书籍</li>
+<li><a href="https://zh.z-lib.org/">Z-Library</a>：可搜索书籍和期刊文章</li>
 </ul>
 <h2 id="工程资料">工程资料</h2>
 <ul>
@@ -302,15 +314,16 @@
         <id>https://92rw.github.io/post/Programming-experience/</id>
         <link href="https://92rw.github.io/post/Programming-experience/">
         </link>
-        <updated>2021-08-26T19:46:53.000Z</updated>
+        <updated>2021-08-26T18:46:53.000Z</updated>
         <content type="html"><![CDATA[<p>首先得从<a href="https://xugaoxiang.com/2020/10/28/jupyter-notebook/">Jupyter Notebook说明</a>开始，毕竟Python程序只能完整执行，但是这个却可以分步骤加载，而且使用<a href="https://zhuanlan.zhihu.com/p/100020058">快捷键</a>十分方便。写好的程序已上传到<a href="https://github.com/92rw/Office-tools">我的Github仓库</a>里。</p>
+<p>时隔一年重新拾起jupyter notebook，阅读其<a href="https://www.osgeo.cn/jupyter/examples/Notebook/Notebook%20Basics.html">说明文档</a>又掌握了很多快捷操作</p>
 <h2 id="图片ocr">图片OCR</h2>
 <p>目前汉字和英文使用天若OCR文字识别，但是其他语言却并没有那么方便。重命名文件也直接用FreeRename可视化操作，所以很多python简单教程里面的内容我都跳过了。然而其他外语的OCR却并非易事。<br>
 半年前第一次接触<a href="https://github.com/JaidedAI/EasyOCR">EasyOCR</a>，然而那会甚至连pip安装都不知道，只能找个OCR网站一个个导入图片再下载。现在写了个小程序可以直接离线OCR，十分方便。</p>
 <p>这个程序的不足之处：原本是带着文字位置一起OCR的，现在只剩下一个个文字块。因此遇到跨行的文字，常常对应不上，也就只能省下来一个个查字母表打字的过程，对于大规模开展工作还是不够适用。</p>
 <h2 id="便捷式填表">便捷式填表</h2>
 <p>需要使用<a href="https://docs.xlwings.org/zh_CN/latest/quickstart.html">xlwings</a>来实现相关操作，B站有其官方教程的<a href="https://www.bilibili.com/video/av84875087">视频免费版</a>。使用起来比筑业云资料方便，主要是对文档内容的精确定位和修改，保证填入信息的一致性。<br>
-2020年8月的时候第一次用xlwings来写这种填表，到2021年的8月才想着把这个上传到github上存档。不仅发现自己当时没写说明文档导致自己记忆里完成的东西和实际有偏差，而且发现自己这几天想到的程序创意去年早就实践过了，看来程序也是一段时间不写就会忘，</p>
+2020年8月的时候第一次用xlwings来写这种填表，到2021年的8月才想着把这个上传到github上存档。不仅发现自己当时没写说明文档导致自己记忆里完成的东西和实际有偏差，而且发现自己这几天想到的程序创意去年早就实践过了，看来程序一段时间不写就会忘。</p>
 ]]></content>
     </entry>
     <entry>

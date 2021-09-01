@@ -143,6 +143,8 @@
         
         
         
+          <li><a data-pjax href="https://92rw.github.io/bber">哔哔</a></li>
+          
           
         <li><a data-pjax href="https://92rw.github.io/friends">友链</a></li>
 
@@ -257,7 +259,7 @@
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630250760851" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630513311582" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -277,7 +279,10 @@
         </div>
         
     <div class="share-button">
-        <span></span>
+        <span>个人链接</span>
+        
+        <a href="https://github.com/92rw/Office-tools" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://92rw.github.io/media/images/github.png" alt=""></i></a>
         
         
         
@@ -330,6 +335,12 @@
 
         
         
+            <div class="mchocie description">
+                <a data-pjax href="https://92rw.github.io/bber" class="menubutton" style="margin-right: 15px;">
+                    <i><img class="icon menuicon" src="" alt="哔哔"></i>&nbsp;<span data-text="哔哔">哔哔</span>
+                </a>
+            </div>
+        
         
         <div class="mchocie description">
             <a data-pjax href="https://92rw.github.io/friends" class="menubutton" style="margin-right: 15px;">
@@ -337,13 +348,7 @@
             </a>
         </div>
         
-        <!-- 
-        <div class="mchocie description">
-            <a data-pjax href="#terrestrial" id="fog_go" class="open-popup menubutton" style="margin-right: 15px;">
-                    <i><img class="icon menuicon" src="" alt="御风飞行"></i>&nbsp;<span data-text="御风飞行">御风飞行</span>
-            </a>
-        </div>
-         -->
+        <!--  -->
     </div>
     <!------------ 加载菜单按钮👆 ------------------------->
     <hr>
@@ -374,11 +379,15 @@
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">08/25/2021</div>
+                
             </div>
             <div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2021
             </div>
         </div>
 
@@ -386,6 +395,38 @@
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 

@@ -145,6 +145,8 @@ CAD操作笔记
         
         
         
+          <li><a data-pjax href="https://92rw.github.io/bber">哔哔</a></li>
+          
           
         <li><a data-pjax href="https://92rw.github.io/friends">友链</a></li>
 
@@ -259,7 +261,7 @@ CAD操作笔记
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630250760851" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630513311582" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -279,7 +281,10 @@ CAD操作笔记
         </div>
         
     <div class="share-button">
-        <span></span>
+        <span>个人链接</span>
+        
+        <a href="https://github.com/92rw/Office-tools" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://92rw.github.io/media/images/github.png" alt=""></i></a>
         
         
         
@@ -332,6 +337,12 @@ CAD操作笔记
 
         
         
+            <div class="mchocie description">
+                <a data-pjax href="https://92rw.github.io/bber" class="menubutton" style="margin-right: 15px;">
+                    <i><img class="icon menuicon" src="" alt="哔哔"></i>&nbsp;<span data-text="哔哔">哔哔</span>
+                </a>
+            </div>
+        
         
         <div class="mchocie description">
             <a data-pjax href="https://92rw.github.io/friends" class="menubutton" style="margin-right: 15px;">
@@ -339,13 +350,7 @@ CAD操作笔记
             </a>
         </div>
         
-        <!-- 
-        <div class="mchocie description">
-            <a data-pjax href="#terrestrial" id="fog_go" class="open-popup menubutton" style="margin-right: 15px;">
-                    <i><img class="icon menuicon" src="" alt="御风飞行"></i>&nbsp;<span data-text="御风飞行">御风飞行</span>
-            </a>
-        </div>
-         -->
+        <!--  -->
     </div>
     <!------------ 加载菜单按钮👆 ------------------------->
     <hr>
@@ -376,11 +381,15 @@ CAD操作笔记
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">08/25/2021</div>
+                
             </div>
             <div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2021
             </div>
         </div>
 
@@ -388,6 +397,38 @@ CAD操作笔记
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 
@@ -1020,7 +1061,7 @@ menulist.eq(i).show();
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2021-08-27</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
                     
                     <a data-pjax href="https://92rw.github.io/tag/UNLjgEJQs/" class="postlink">
@@ -1045,6 +1086,17 @@ menulist.eq(i).show();
 <p><a href="https://www.autodesk.com.cn/shortcuts/autocad">官方文档</a>中列出了各种快捷键，但是我觉得平时常用的也就只是其中几个而已。</p>
 <h2 id="视口的使用">视口的使用</h2>
 <p>输入<code>mv</code>框选视口的范围，还可以设置其标注比例、限定显示的图层，对于按标准尺寸打印图纸十分有帮助。</p>
+<blockquote>
+<p>laymcur设定为当前图层<br>
+v视口编辑器<br>
+mv新建视口<br>
+rec添加矩形<br>
+layer隐藏不必要图层<br>
+MV-LO-ON锁住视口<br>
+MV-LO-OFF打开视口<br>
+“layvpi+回车”就是在当前视口之外的其它所有视口冻结当前选择对象所在的图层。<br>
+“layfrz+回车”就是在当在当前视口冻结选择对象所在的图层。</p>
+</blockquote>
 <h1 id="revit操作笔记">Revit操作笔记</h1>
 <p>好久没用了，近期的工作内容和Revit的关系并不大，等以后有机会了再补充。</p>
 

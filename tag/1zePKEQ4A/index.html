@@ -88,7 +88,7 @@
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630586182206" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630639588149" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -404,6 +404,9 @@
             $("#siteinfo-postsnum").html(postsnum);
         </script>
     
+    <script>
+        let commentsHide = false
+    </script>
     <!------ 根据自定义配置声明变量👆 --------------------->
 
 
@@ -412,41 +415,43 @@
         var icondict = new Array();
     </script>
     
-    <script>
-        var iconname = "首页";
-        var iconurl = "Home";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "归档";
-        var iconurl = "Archive";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "标签";
-        var iconurl = "Tag";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "关于";
-        var iconurl = "About";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "留言板";
-        var iconurl = "Talk";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "友情链接";
-        var iconurl = "Friends";
-        icondict[iconname] = iconurl;
-    </script>
+        
+            <script>
+                var iconname = "首页";
+                var iconurl = "Home";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "归档";
+                var iconurl = "Archive";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "标签";
+                var iconurl = "Tag";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "关于";
+                var iconurl = "About";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "留言板";
+                var iconurl = "Talk";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "友情链接";
+                var iconurl = "Friends";
+                icondict[iconname] = iconurl;
+            </script>
+        
     
     <!----------根据自定义配置设置图标信息👆---------->
 </body>
@@ -656,6 +661,10 @@
                 shareInit();
             if (donateChoice)
                 donateInit();
+            if ("valine" == "default"&&!commentsHide) {
+                $("#comment").hide()
+                commentsHide = true
+            }
             lazyload();
             codeinit();
             if ("valine" == "twikoo") {
@@ -1256,12 +1265,15 @@ menulist.eq(i).show();
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
-    var bgchoice = $('#bgchoice').html();
+    var bgchoice = "link"
     var bg = $('#bg');
     var bgurl = document.getElementById("bgurl").innerHTML;
     if (bgchoice == 'default')
+    {
         for (var i = 0; i < 3; i++)
             bgurl = bgurl.replace("\\", "/");
+        bgurl = "https://92rw.github.io/" + bgurl;
+    }
     bg.css("background", "url('" + bgurl + "')");
 
     window.onload = function () {

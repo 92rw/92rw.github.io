@@ -259,7 +259,7 @@
                         src='https://92rw.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://92rw.github.io/images/avatar.png?v=1630586182206" class="avatar">
+            <img src="https://92rw.github.io/images/avatar.png?v=1630639588149" class="avatar">
         </div>
         <div class="sitename">92rw</div>
         <span class="description" data-text='["记录个人的一些生活笔记"]'>&nbsp;</span>
@@ -575,6 +575,9 @@
             $("#siteinfo-postsnum").html(postsnum);
         </script>
     
+    <script>
+        let commentsHide = false
+    </script>
     <!------ 根据自定义配置声明变量👆 --------------------->
 
 
@@ -583,41 +586,43 @@
         var icondict = new Array();
     </script>
     
-    <script>
-        var iconname = "首页";
-        var iconurl = "Home";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "归档";
-        var iconurl = "Archive";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "标签";
-        var iconurl = "Tag";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "关于";
-        var iconurl = "About";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "留言板";
-        var iconurl = "Talk";
-        icondict[iconname] = iconurl;
-    </script>
-    
-    <script>
-        var iconname = "友情链接";
-        var iconurl = "Friends";
-        icondict[iconname] = iconurl;
-    </script>
+        
+            <script>
+                var iconname = "首页";
+                var iconurl = "Home";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "归档";
+                var iconurl = "Archive";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "标签";
+                var iconurl = "Tag";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "关于";
+                var iconurl = "About";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "留言板";
+                var iconurl = "Talk";
+                icondict[iconname] = iconurl;
+            </script>
+        
+            <script>
+                var iconname = "友情链接";
+                var iconurl = "Friends";
+                icondict[iconname] = iconurl;
+            </script>
+        
     
     <!----------根据自定义配置设置图标信息👆---------->
 </body>
@@ -827,6 +832,10 @@
                 shareInit();
             if (donateChoice)
                 donateInit();
+            if ("valine" == "default"&&!commentsHide) {
+                $("#comment").hide()
+                commentsHide = true
+            }
             lazyload();
             codeinit();
             if ("valine" == "twikoo") {
@@ -1186,7 +1195,36 @@ menulist.eq(i).show();
                         <div class="commentcontainer">
                             
                                 
-                                    <p>请到客户端“主题--自定义配置--配置”中填入leancloud_appID和key</p>
+                                    
+        <div id="vcomments">
+        </div>
+        <script>
+            var valine = new Valine();
+            var curpath = window.location.pathname;
+            if (curpath[curpath.length - 1] != '/')
+                curpath += '/'
+            valine.init({
+                el: '#vcomments',
+                appId: '9N54CMIDTo3FMMd1xqq7Qtem-gzGzoHsz',
+                appKey: 'vfPD8PSpOwKRMfh3kKfvUGjp',
+                avatar: 'retro',
+                pageSize: 10,
+                placeholder: '既然来了，何不畅所欲言呢？',
+                recordIP: true,
+                path: curpath //[重点] 记得添加path路径
+            });
+        </script>
+        <script type="text/javascript">
+            var jrsc = '既然来了，何不畅所欲言呢？';
+            jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                    .dynasty + " · " + result.data.origin.author;
+            });
+        </script>
+
+
+                                    <div class="clear"></div>
                                 
                             
                         </div>
@@ -1272,13 +1310,20 @@ menulist.eq(i).show();
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
-    var bgchoice = $('#bgchoice').html();
+    var bgchoice = "link"
     var bg = $('#bg');
     var bgurl = document.getElementById("bgurl").innerHTML;
     if (bgchoice == 'default')
+    {
         for (var i = 0; i < 3; i++)
             bgurl = bgurl.replace("\\", "/");
+        bgurl = "https://92rw.github.io/" + bgurl;
+    }
     bg.css("background", "url('" + bgurl + "')");
+
+    window.onload = function () {
+        aplayerbtnInit();
+    }
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 

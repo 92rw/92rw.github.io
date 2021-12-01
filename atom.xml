@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-12-01T05:00:39.539Z</updated>
+    <updated>2021-12-01T05:02:21.661Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -313,7 +313,7 @@ MV-LO-OFF打开视口<br>
         <id>https://92rw.github.io/post/Resource-index/</id>
         <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-26T16:00:00.000Z</updated>
+        <updated>2021-08-26T15:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
 <h2 id="查电子书">查电子书</h2>
 <ul>
@@ -331,6 +331,7 @@ MV-LO-OFF打开视口<br>
 <li><a href="http://www.uzzf.com/">东坡下载</a></li>
 <li><a href="http://www.cxfeng.com/">超先锋下载网</a></li>
 <li><a href="https://www.veryhuo.com/">最火软件站</a></li>
+<li><a href="https://coyis.com/dir/guifantuji">建筑一生</a></li>
 </ul>
 <h2 id="查前端资源">查前端资源</h2>
 <ul>

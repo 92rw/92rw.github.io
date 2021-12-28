@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://92rw.github.io</id>
     <title>92rw</title>
-    <updated>2021-12-21T06:18:27.387Z</updated>
+    <updated>2021-12-28T17:12:13.712Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://92rw.github.io"/>
     <link rel="self" href="https://92rw.github.io/atom.xml"/>
@@ -11,87 +11,11 @@
     <icon>https://92rw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 92rw</rights>
     <entry>
-        <title type="html"><![CDATA[算王软件界面及常用功能]]></title>
-        <id>https://92rw.github.io/post/Suanwang-Interface/</id>
-        <link href="https://92rw.github.io/post/Suanwang-Interface/">
-        </link>
-        <updated>2021-12-20T03:16:49.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1算量窗口">1.算量窗口</h1>
-<ul>
-<li>
-<p>上方工具栏<br>
-1.1底图选择状态：可选中多个图元，右键后可对其进行底图处理；<br>
-鼠标选择状态：一次只能选择一个图元<br>
-1.2测量尺状态<br>
-1.3布置立管按钮：需首先输入立管长度，也可输入计算式<br>
-1.4计数标记<br>
-1.5桥架测量：若桥架相连，其中一侧的首末段必须在另一个的框内<br>
-1.6桥架立管：可与横向桥架相连，图纸中的长度不影响算量长度</p>
-</li>
-<li>
-<p>上方图形区<br>
-1.7底图颜色显示状态：可切换底图颜色显示的状态，以及透明度<br>
-设置对话框：选择测量图元的尺寸（大小、线宽）</p>
-</li>
-<li>
-<p>右侧<br>
-1.8数据添加页<br>
-<em>添加方法</em><br>
-①从图形中选中文字，在数据添加页右键提取②选中图元，Ctrl+C再Ctrl+V③从主项模板数据中选择④直接输入<br>
-<em>设置相关项</em><br>
-计算开关盒、配管工程量等，与主项共享测量图元</p>
-</li>
-<li>
-<p>下方<br>
-编辑状态：只能通过“序号”行对应表格，</p>
-</li>
-</ul>
-<h1 id="2算量方法">2.算量方法</h1>
-<h2 id="21点数标记">2.1点数标记</h2>
-<p>在“计数标记”状态下点击图元，用于无标记或标记不全的图例</p>
-<h2 id="22快速数数量">2.2快速数数量</h2>
-<p>测量单个图元：选中图元，鼠标右键选择“快速数数量”<br>
-测量图元组：切换到底图选择状态，鼠标右键选择“快速数数量”<br>
-##2.3 长度量计算<br>
-测量尺状态/布置立管</p>
-<h1 id="3测量结果修改">3.测量结果修改</h1>
-<h2 id="31-修改测量公式">3.1 修改测量公式</h2>
-<p>测量图元右键“属性”，可对多个图元同时修改<br>
-测量规则为G，可计算开关盒、插座盒等<br>
-在测量图元属性窗口，可批量修改图元的数值，如X公式输入-1，则所有数值变为“原值-1”，若需要改为-1，则公式需为“1*（-1）”<br>
-通过数字键可批量修改I值</p>
-<h2 id="32-选中图元">3.2 选中图元</h2>
-<p>测量状态的图元：①右键“选中当前测量”②Ctrl+A③“测量尺状态”的下拉菜单，选中当前测量线/选中当前立管<br>
-已测量图元：利用鼠标框选，按住Ctrl再框选可以增加或删除选中的区域<br>
-选中相同立管：选中其中一个立管，“测量尺状态”的下拉菜单<br>
-通过查找功能选中图元：可查找满足条件的图元，可指定查找范围：底图/测量图元（当前图元/已添加图元/图元类型）<br>
-线条合并为一个图形：选中线条，右键“快速数数量”，右键“选中当前测量”，右键“删除快速标记”</p>
-<h2 id="33调整图元位置">3.3调整图元位置：</h2>
-<ul>
-<li>在图纸中移动<br>
-单个图元移动：选中相连图元，按住Ctrl再移动，可将图元带着相连的测量线一起移动<br>
-整体移动：选中区域，按快捷键W，通过鼠标移动</li>
-<li>调整所在项<br>
-选中图元，鼠标右键选择“变更”（快捷键Ctrl+D），在目标项双击“关联”或右键“当前测量图元添加到本组”</li>
-</ul>
-<h2 id="34-拆分工程量">3.4 拆分工程量</h2>
-<p>将需要拆分的区域选中，鼠标右键选择“拆分工程量”（快捷键Ctrl+B）<br>
-计算倍数可在原值上加/乘<br>
-文字信息可在原值前后添加</p>
-<h2 id="35-数据窗口的表格">3.5 数据窗口的表格</h2>
-<p>调整顺序：选中后Ctrl+X剪切后粘贴<br>
-删除某行：选中，删除勾选行<br>
-按要求选择某行：过滤<br>
-修改勾选行：先勾选需要修改的行<br>
-水平竖向分列：表格内右键“表格设置”，选择“水平竖向分开”</p>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[算王工程算量笔记]]></title>
-        <id>https://92rw.github.io/post/Suanwang-tutorial1/</id>
-        <link href="https://92rw.github.io/post/Suanwang-tutorial1/">
+        <id>https://92rw.github.io/post/Suanwang-tutorial/</id>
+        <link href="https://92rw.github.io/post/Suanwang-tutorial/">
         </link>
-        <updated>2021-12-20T02:50:20.000Z</updated>
+        <updated>2021-12-20T22:50:20.000Z</updated>
         <content type="html"><![CDATA[<h1 id="3电气算量">3.电气算量</h1>
 <h2 id="配管和配线计算方法">配管和配线计算方法</h2>
 <p>配线计算：在配线数量中输入线管数量，选择主项信息后，设置相关项选择“配线”<br>
@@ -175,6 +99,7 @@
 <h3 id="1按规格分开识别">1.按规格分开识别：</h3>
 <p>①底图选择状态，选中标注及管道，点击“消防快速布线”（上方DN图形）<br>
 存在问题：缺乏标注的管道需手动添加<br>
+计算原则：先大管后小管，先平面后立面<br>
 ②添加计算规则：相关项中选中“管道刷油面积”，在规则列表中选中管道规格；此处可选择支架计算的规则<br>
 ③喷头短立管识别：输入立管高度，选中喷头图元，右键“快速布置立管”</p>
 <h3 id="2消防管道批量识别立管自动生成">2.消防管道批量识别（立管自动生成）：</h3>
@@ -245,6 +170,9 @@
 在有套管的地方画上测量线与已添加管线相交&quot;下拉菜单【根据当前测量线和已添加测量线相交数数量】，套管就会按照不同规格的管道统计出来<br>
 （4）管件计算<br>
 在计算完管道后，点击上方工具栏中【读取管件】凸，按配置需求填写后，识别添加</p>
+<h2 id="支架计算">支架计算</h2>
+<p>支架的选材：单根DN100、单根DN150的管道一般会选5#角钢或5#槽钢或6#槽钢；两根共用支架时会选8#或10#槽钢；三根管共用时会选10#或12#槽钢；DN50<sub>DN80在喷淋中用量较小，DN65在消火栓中用量较多，一般按5#角钢考虑；DN25</sub>DN40一般按3#或4#角钢考虑。<br>
+喷淋管支架大致估算：150 .100管按5#槽钢间距4.5米，“U”型支架，单个支架用材1.5米计，80.65.50管按5#角钢间距4.5米，“U”型支架，单个支架用材1.5米计，40.32. 25管按4#角钢间距3.5米，“L”型支架，单个支架用材1.2米</p>
 <h1 id="6暖通算量">6.暖通算量</h1>
 <h1 id="风管面积测量">风管面积测量</h1>
 <p>选中文字后鼠标右键“选中相同文字”，将对应文字颜色标记。<br>
@@ -254,11 +182,87 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[算王软件界面及常用功能]]></title>
+        <id>https://92rw.github.io/post/Suanwang-Interface/</id>
+        <link href="https://92rw.github.io/post/Suanwang-Interface/">
+        </link>
+        <updated>2021-12-20T03:16:49.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1算量窗口">1.算量窗口</h1>
+<ul>
+<li>
+<p>上方工具栏<br>
+1.1底图选择状态：可选中多个图元，右键后可对其进行底图处理；<br>
+鼠标选择状态：一次只能选择一个图元<br>
+1.2测量尺状态<br>
+1.3布置立管按钮：需首先输入立管长度，也可输入计算式<br>
+1.4计数标记<br>
+1.5桥架测量：若桥架相连，其中一侧的首末段必须在另一个的框内<br>
+1.6桥架立管：可与横向桥架相连，图纸中的长度不影响算量长度</p>
+</li>
+<li>
+<p>上方图形区<br>
+1.7底图颜色显示状态：可切换底图颜色显示的状态，以及透明度<br>
+设置对话框：选择测量图元的尺寸（大小、线宽）</p>
+</li>
+<li>
+<p>右侧<br>
+1.8数据添加页<br>
+<em>添加方法</em><br>
+①从图形中选中文字，在数据添加页右键提取②选中图元，Ctrl+C再Ctrl+V③从主项模板数据中选择④直接输入<br>
+<em>设置相关项</em><br>
+计算开关盒、配管工程量等，与主项共享测量图元</p>
+</li>
+<li>
+<p>下方<br>
+编辑状态：只能通过“序号”行对应表格，</p>
+</li>
+</ul>
+<h1 id="2算量方法">2.算量方法</h1>
+<h2 id="21点数标记">2.1点数标记</h2>
+<p>在“计数标记”状态下点击图元，用于无标记或标记不全的图例</p>
+<h2 id="22快速数数量">2.2快速数数量</h2>
+<p>测量单个图元：选中图元，鼠标右键选择“快速数数量”<br>
+测量图元组：切换到底图选择状态，鼠标右键选择“快速数数量”<br>
+##2.3 长度量计算<br>
+测量尺状态/布置立管</p>
+<h1 id="3测量结果修改">3.测量结果修改</h1>
+<h2 id="31-修改测量公式">3.1 修改测量公式</h2>
+<p>测量图元右键“属性”，可对多个图元同时修改<br>
+测量规则为G，可计算开关盒、插座盒等<br>
+在测量图元属性窗口，可批量修改图元的数值，如X公式输入-1，则所有数值变为“原值-1”，若需要改为-1，则公式需为“1*（-1）”<br>
+通过数字键可批量修改I值</p>
+<h2 id="32-选中图元">3.2 选中图元</h2>
+<p>测量状态的图元：①右键“选中当前测量”②Ctrl+A③“测量尺状态”的下拉菜单，选中当前测量线/选中当前立管<br>
+已测量图元：利用鼠标框选，按住Ctrl再框选可以增加或删除选中的区域<br>
+选中相同立管：选中其中一个立管，“测量尺状态”的下拉菜单<br>
+通过查找功能选中图元：可查找满足条件的图元，可指定查找范围：底图/测量图元（当前图元/已添加图元/图元类型）<br>
+线条合并为一个图形：选中线条，右键“快速数数量”，右键“选中当前测量”，右键“删除快速标记”</p>
+<h2 id="33调整图元位置">3.3调整图元位置：</h2>
+<ul>
+<li>在图纸中移动<br>
+单个图元移动：选中相连图元，按住Ctrl再移动，可将图元带着相连的测量线一起移动<br>
+整体移动：选中区域，按快捷键W，通过鼠标移动</li>
+<li>调整所在项<br>
+选中图元，鼠标右键选择“变更”（快捷键Ctrl+D），在目标项双击“关联”或右键“当前测量图元添加到本组”</li>
+</ul>
+<h2 id="34-拆分工程量">3.4 拆分工程量</h2>
+<p>将需要拆分的区域选中，鼠标右键选择“拆分工程量”（快捷键Ctrl+B）<br>
+计算倍数可在原值上加/乘<br>
+文字信息可在原值前后添加</p>
+<h2 id="35-数据窗口的表格">3.5 数据窗口的表格</h2>
+<p>调整顺序：选中后Ctrl+X剪切后粘贴<br>
+删除某行：选中，删除勾选行<br>
+按要求选择某行：过滤<br>
+修改勾选行：先勾选需要修改的行<br>
+水平竖向分列：表格内右键“表格设置”，选择“水平竖向分开”</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[软件清单备份]]></title>
         <id>https://92rw.github.io/post/Software-lists/</id>
         <link href="https://92rw.github.io/post/Software-lists/">
         </link>
-        <updated>2021-08-29T10:00:00.000Z</updated>
+        <updated>2021-08-29T09:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>重装系统之后，需要装什么程序以恢复到原先的生产力水平？既然是个人主页，在此罗列一些我自己使用的软件清单，以便日后换机时能尽快恢复效率。大隐隐于市，其他还有哪些非用不可的程序，可能以后真到换机的时候才会察觉吧。</p>
 <h2 id="开机自启动">开机自启动</h2>
 <table>
@@ -339,9 +343,9 @@
 </tr>
 <tr>
 <td>工程画图软件</td>
-<td>AutoCAD2016</td>
-<td>Revit2018</td>
-<td>天正电气</td>
+<td>AutoCAD</td>
+<td>Revit/Sketchup</td>
+<td>天正T20 V7</td>
 </tr>
 <tr>
 <td>工程算量软件</td>
@@ -560,7 +564,7 @@ MV-LO-OFF打开视口<br>
         <id>https://92rw.github.io/post/Resource-index/</id>
         <link href="https://92rw.github.io/post/Resource-index/">
         </link>
-        <updated>2021-08-26T14:00:00.000Z</updated>
+        <updated>2021-08-26T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>之前网上有各种渠道推荐了不同的查资源方式，但是早就被淹没在众多看过的链接之中了，还不如我自己梳理总结一个。</p>
 <h2 id="查电子书">查电子书</h2>
 <ul>
@@ -591,7 +595,37 @@ MV-LO-OFF打开视口<br>
 <li><a href="https://maofun.com/1635.html">以图搜图网站</a></li>
 <li><a href="https://admcpr.com/where-to-find-royalty-free-images/">免费图片资源</a></li>
 </ul>
-<h2 id="查下载链接">查下载链接</h2>
+<h2 id="图片找出处">图片找出处</h2>
+<p>https://www.google.com.hk/imghp?hl=zh-TW&amp;ogbl<br>
+https://yandex.com/images/<br>
+https://ascii2d.net/<br>
+https://3d.iqdb.org/<br>
+https://saucenao.com/<br>
+https://avdanyuwiki.com/<br>
+https://xslist.org/zh<br>
+https://gelbooru.com/<br>
+https://javdb.com/<br>
+https://www.cunhua.gay/</p>
+<h2 id="搜索引擎">搜索引擎</h2>
+<p>谷歌镜像网站：<br>
+https://google.tiktokios.com/<br>
+https://go-xyz.xyz/<br>
+https://search.myway.com/home/index.jhtml<br>
+https://startgoogle.startpagina.nl/<br>
+https://goobe.io/<br>
+https://search.サクラ.tw/<br>
+https://search.iwiki.uk/extdomains/www.google.com.hk/<br>
+https://g20.i-research.edu.eu.org/<br>
+https://mars.shuu.cf/<br>
+http://www.google.cn.ua/<br>
+http://www.googlen.org/<br>
+https://scholar.niostack.com/<br>
+维基百科：<br>
+https://www.wikipedia.hfut.cf/<br>
+俄罗斯搜索引擎：<br>
+https://yandex.com/<br>
+知网镜像，谷歌学术镜像<br>
+https://gfsoso.99lb.net/</p>
 ]]></content>
     </entry>
     <entry>

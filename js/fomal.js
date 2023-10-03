@@ -97,13 +97,12 @@ function getDistance(e1, n1, e2, n2) {
 }
 
 function showWelcome() {
-
-    let dist = getDistance(103.8831102, 1.3318817, ipLoacation.lon, ipLoacation.lat); //这里换成自己的经纬度
-    let pos = ipLoacation.country == ipLoacation.city ? ipLoacation.country : (ipLoacation.country + " " + ipLoacation.city);
-    let ip = ipLoacation.query;
+    let dist = ipLoacation.result.location==null ? "暂时无法获取" : getDistance(103.8831102, 1.3318817, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //三元表达式计算经纬度差异
+    let pos = ipLoacation.result.ad_info.nation + " " + ipLoacation.result.ad_info.city;
+    let ip = ipLoacation.result.ip;
     let posdesc;
     //根据国家、省份、城市信息自定义欢迎语
-    switch (ipLoacation.country) {
+    switch (ipLoacation.result.ad_info.nation) {
         case "日本":
             posdesc = "よろしく，一起去看樱花吗";
             break;
@@ -155,6 +154,7 @@ function showWelcome() {
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
 }
+
 
 window.onload = showWelcome;
 // 如果使用了pjax在加上下面这行代码
@@ -552,8 +552,8 @@ if (document.body.clientWidth > 992) {
                 zoom: 0.9,
                 borderRadius: 5 + 'px',
                 right: 55.6 + 'px',
-                nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
-                hoverMsg: "春天啦~",
+                nekoImg: "/static/images/anchor.png",
+                hoverMsg: "回到页首",
                 color: "var(--theme-color)",
                 during: 500,
                 blog_body: "body",
@@ -1054,7 +1054,7 @@ function createtime2() {
     setTimeout(
         console.warn.bind(
             console,
-            "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问92rw的个人网站",
+            "%c ⚡ Camera On ⚡ %c 你正在访问92rw🚆的个人网站",
             "color:white; background-color:#f0ad4e",
             ""
         )
@@ -2319,65 +2319,26 @@ dd = d.getDate();
 y = d.getFullYear();
 
 // 公祭日
-if (m == 9 && dd == 18) {
+if (m == 1 && dd == 21) {
     document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今天是九一八事变" + (y - 1931).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 7 && dd == 7) {
-    document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今天是卢沟桥事变" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 12 && dd == 13) {
-    document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今天是南京大屠杀" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 8 && dd == 14) {
-    document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今天是世界慰安妇纪念日\n🪔勿忘国耻，振兴中华🪔");
+        Swal.fire("今天是路易十六被送上断头台" + (y - 1793).toString() + "周年\n🪔公民路易·卡佩没有背叛法兰西🪔");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 
 
 // 节假日
-if (m == 10 && dd <= 3) {//国庆节
+if (m == 11 && dd == 11) {//一战纪念日
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
+        Swal.fire("第一次世界大战结束" + (y - 1918).toString() + "年，唯愿和平永存💐");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-if (m == 8 && dd == 15) {//搞来玩的，小日子投降
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("小日子已经投降" + (y - 1945).toString() + "年了😃");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 1 && dd == 1) {//元旦节
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire(y.toString() + "年元旦快乐！🎉");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 3 && dd == 8) {//妇女节
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("各位女神们，妇女节快乐！👩");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
+l = ["Pokemon GO也是因愚人节的玩笑而成真的游戏呢！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "阁下何不乘风起，扶“谣”直上九万里"]
 if (m == 4 && dd == 1) {//愚人节，随机谎话
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire(l[Math.floor(Math.random() * l.length)]);
+        Swal.fire("今天是愚人节：" + l[Math.floor(Math.random() * l.length)]);
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
@@ -2399,52 +2360,14 @@ if (m == 5 && dd == 20) {//520
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-if (m == 7 && dd == 1) {//建党节
+if (m == 12 && dd >= 25) {//圣诞节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 9 && dd == 10) {//教师节
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("各位老师们教师节快乐！👩‍🏫");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 12 && dd == 25) {//圣诞节
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("圣诞节快乐！🎄");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 8 && dd == 11) {//站长生日
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 6 && dd == 30) {//小猫咪生日
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
+        Swal.fire("Wish you merry Christmas！🎄\nHappy new Year.");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 
 //传统节日部分
-
-if ((y == 2023 && m == 4 && dd == 5) || (y == 2024 && m == 4 && dd == 4) || (y == 2025 && m == 4 && dd == 4)) {//清明节
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("清明时节雨纷纷,一束鲜花祭故人💐");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if ((y == 2023 && m == 12 && dd == 22) || (y == 2024 && m == 12 && dd == 21) || (y == 2025 && m == 12 && dd == 21)) {//冬至
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-
 var lunar = calendarFormatter.solar2lunar();
 
 //农历采用汉字计算，防止出现闰月导致问题

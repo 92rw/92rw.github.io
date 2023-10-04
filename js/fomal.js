@@ -73,35 +73,32 @@ function scrollToTop() {
 /* 欢迎信息 start */
 //get请求
 $.ajax({
-    type: 'get',
-    url: 'http://ip-api.com/json/?fields=24785&lang=zh-CN',
-    success: function (res) {
-        ipLoacation = res;
+    type: "get",
+    url: 'https://api.kxyr.top/api/ip',//http://ip-api.com/json/?fields=24785&lang=zh-CN
+    success: function(e) {
+        ipLoacation = e
     }
-});
+}),
+    window.onload = showWelcome,
+    document.addEventListener("pjax:complete", showWelcome);
 
-function getDistance(e1, n1, e2, n2) {
-    const R = 6371
-    const {sin, cos, asin, PI, hypot} = Math
-    let getPoint = (e, n) => {
-        e *= PI / 180
-        n *= PI / 180
-        return {x: cos(n) * cos(e), y: cos(n) * sin(e), z: sin(n)}
-    }
-
-    let a = getPoint(e1, n1)
-    let b = getPoint(e2, n2)
-    let c = hypot(a.x - b.x, a.y - b.y, a.z - b.z)
-    let r = asin(c / 2) * 2 * R
-    return Math.round(r);
+function getDistance(e, t, n, o) {
+    const {sin: a, cos: s, asin: i, PI: c, hypot: l} = Math;
+    let r = (e,t)=>(e *= c / 180,
+        {
+            x: s(t *= c / 180) * s(e),
+            y: s(t) * a(e),
+            z: a(t)
+        })
+        , d = r(e, t)
+        , u = r(n, o)
+        , b = 2 * i(l(d.x - u.x, d.y - u.y, d.z - u.z) / 2) * 6371;
+    return Math.round(b)
 }
 
 function showWelcome() {
-    let dist = ipLoacation.result.location==null ? "暂时无法获取" : getDistance(103.8831102, 1.3318817, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //三元表达式计算经纬度差异
-    let pos = ipLoacation.result.ad_info.nation + " " + ipLoacation.result.ad_info.city;
-    let ip = ipLoacation.result.ip;
-    let posdesc;
-    //根据国家、省份、城市信息自定义欢迎语
+    let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLoacation.result.location.lng, ipLoacation.result.location.lat), a = ipLoacation.result.ad_info.nation + " " + ipLoacation.result.ad_info.city;
+    e = ipLoacation.result.ip
     switch (ipLoacation.result.ad_info.nation) {
         case "日本":
             posdesc = "よろしく，一起去看樱花吗";
@@ -128,6 +125,7 @@ function showWelcome() {
             posdesc = "拾起一片枫叶赠予你";
             break;
         case "中国":
+            a = ipLoacation.result.ad_info.province + " " + ipLoacation.result.ad_info.city
             posdesc = "世界那么大，我想去看看";
             break;
         default:
@@ -145,20 +143,13 @@ function showWelcome() {
     else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好！</span>";
     else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！";
     else timeChange = "夜深了，早点休息，少熬夜。";
-
     try {
-        //自定义文本和需要放的位置
-        document.getElementById("welcome-info").innerHTML =
-            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
-    } catch (err) {
+        document.getElementById("welcome-info").innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--blue-custom)">${a}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--blue-custom)">${o}</span> 公里，当前的IP地址为： <span style="color:var(--blue-custom)">${e}</span>， ${posdesc}</b>`
+    } catch (e) {
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
 }
 
-
-window.onload = showWelcome;
-// 如果使用了pjax在加上下面这行代码
-document.addEventListener('pjax:complete', showWelcome);
 
 /* 欢迎信息 end */
 
@@ -552,7 +543,7 @@ if (document.body.clientWidth > 992) {
                 zoom: 0.9,
                 borderRadius: 5 + 'px',
                 right: 55.6 + 'px',
-                nekoImg: "/static/images/anchor.png",
+                nekoImg: "https://static-resources.vercel.app/icons/anchor.png",
                 hoverMsg: "回到页首",
                 color: "var(--theme-color)",
                 during: 500,
@@ -1002,6 +993,7 @@ function createtime1() {
 
     var ascll = [
         `欢迎来到92rw的个人网站!`,
+        `一起享受科技加持下的新时代 🚂🚅🚄`,
         `
 
  █████╗ ██████╗ ██████╗ ██╗    ██╗
@@ -1012,9 +1004,9 @@ function createtime1() {
  ╚════╝ ╚══════╝╚═╝  ╚═╝ ╚══╝╚══╝ 
                                               
 `,
-        "此个人网站已经在Github存在",
+        "今天是个人博客上线第",
         dnum,
-        "天啦!",
+        "天",
         "©2021 By 92rw",
     ];
 
@@ -1208,11 +1200,11 @@ var titleTime;
 document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
         //离开当前页面时标签显示内容
-        document.title = '👀跑哪里去了~';
+        document.title = '👀どこ行ったの？';
         clearTimeout(titleTime);
     } else {
         //返回当前页面时标签显示内容
-        document.title = '🐖抓到你啦～';
+        document.title = '🐖捕まえた～';
         //两秒后变回正常标题
         titleTime = setTimeout(function () {
             document.title = OriginTitile;
@@ -2631,9 +2623,9 @@ function createtime() {
     let currentTimeHtml = "";
     (currentTimeHtml =
         hnum < 18 && hnum >= 9
-            ? `<img class='boardsign' src='/static/icons/F小屋-科研摸鱼中.svg' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站已上线 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`
+            ? `<img class='boardsign' src='https://static-resources.vercel.app/icons/F小屋-科研摸鱼中.svg' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站已上线 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`
             /* <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀*/
-            : `<img class='boardsign' src='/static/icons/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已上线 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`),
+            : `<img class='boardsign' src='https://static-resources.vercel.app/icons/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已上线 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
@@ -3018,10 +3010,10 @@ if (localStorage.getItem("blogbg") != undefined) {
     setBg(localStorage.getItem("blogbg"));
 } else {
     document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(/static/images/Light-Horizontal.jpg);
-    --darkmode-bg:url(/static/images/Dark-Horizontal.jpg);
-    --mobileday-bg: url(/static/images/Light-Vertical.jpg);
-    --mobilenight-bg: url(/static/images/Dark-Vertical.jpg);
+    --default-bg: url(https://static-resources.vercel.app/image/Light-Horizontal.jpg);
+    --darkmode-bg:url(https://static-resources.vercel.app/image/Dark-Horizontal.jpg);
+    --mobileday-bg: url(https://static-resources.vercel.app/image/Light-Vertical.jpg);
+    --mobilenight-bg: url(https://static-resources.vercel.app/image/Dark-Vertical.jpg);
   }`;
 }
 
@@ -3255,7 +3247,7 @@ function createWinbox() {
 <h3>1. 铁路</h3>
 <details class="folding-tag" cyan><summary> 查看横版铁路背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail1.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail2.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail3.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail4.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail4.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail5.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail5.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail6.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail6.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail7.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail7.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/rail8.jpg)" class="imgbox" onclick="changeBg('url(/static/images/rail8.jpg)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail1.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail2.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail3.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail4.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail4.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail5.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail5.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail6.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail6.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail7.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail7.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/rail8.jpg)" class="imgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/rail8.jpg)')"></a></div>
               </div>
             </details>
 
@@ -3282,7 +3274,7 @@ function createWinbox() {
 <h3>4. 适配手机</h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的竖版背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone1.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone2.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone3.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone4.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone4.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone5.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone5.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone6.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone6.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone7.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone7.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/static/images/phone8.jpg)" class="pimgbox" onclick="changeBg('url(/static/images/phone8.jpg)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone1.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone2.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone3.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone4.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone4.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone5.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone5.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone6.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone6.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone7.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone7.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://static-resources.vercel.app/image/phone8.jpg)" class="pimgbox" onclick="changeBg('url(https://static-resources.vercel.app/image/phone8.jpg)')"></a></div>
               </div>
             </details>
 

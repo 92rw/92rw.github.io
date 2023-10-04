@@ -6582,43 +6582,43 @@ blockquote.pullquote.right {
 /* 字体引入 */
 @font-face {
   font-family: YSHST;
-  src: url(/static/fonts/优设好身体.woff2);
+  src: url(https://static-resources.vercel.app/fonts/优设好身体.woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: MiSans;
-  src: url(/static/fonts/MiSans.woff2);
+  src: url(https://static-resources.vercel.app/fonts/MiSans.woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: HYTMR;
-  src: url(/static/fonts/HYTangMeiRen55W.woff2);
+  src: url(https://static-resources.vercel.app/fonts/HYTangMeiRen55W.woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: LXGW;
-  src: url(/static/fonts/霞鹜文楷.woff2);
+  src: url(https://static-resources.vercel.app/fonts/霞鹜文楷.woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: TTQHB;
-  src: url(/static/fonts/甜甜圈海报字体.woff2);
+  src: url(https://static-resources.vercel.app/fonts/甜甜圈海报字体.woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: Consolas_1;
-  src: url(/static/fonts/Consolas.woff2);
+  src: url(https://static-resources.vercel.app/fonts/Consolas.woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: ZhuZiAWan;
-  src: url(/static/fonts/ZhuZiAWan2.woff2);
+  src: url(https://static-resources.vercel.app/fonts/ZhuZiAWan2.woff2);
   font-display: swap
 }
 
@@ -7701,13 +7701,13 @@ button#go-up:hover #percent {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(/static/images/InfoBackGround-Spring.png);
+  background-image: url(https://static-resources.vercel.app/image/InfoBackGround-Sunlight.png);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(/static/images/InfoBackGround-Aurora.webp);
+  background-image: url(https://static-resources.vercel.app/image/InfoBackGround-Aurora.webp);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;

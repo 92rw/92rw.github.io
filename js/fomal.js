@@ -74,12 +74,12 @@ function scrollToTop() {
 //get请求
 $.ajax({
     type: "get",
-    url: 'https://api.kxyr.top/api/ip',//http://ip-api.com/json/?fields=24785&lang=zh-CN
+    url: 'https://static-resources.vercel.app/api/index/ip',//https://api.kxyr.top/api/ip
     success: function(e) {
-        ipLoacation = e
-    }
+    ipLocation = e
+}
 }),
-    window.onload = showWelcome,
+window.onload = showWelcome,
     document.addEventListener("pjax:complete", showWelcome);
 
 function getDistance(e, t, n, o) {
@@ -97,9 +97,10 @@ function getDistance(e, t, n, o) {
 }
 
 function showWelcome() {
-    let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLoacation.result.location.lng, ipLoacation.result.location.lat), a = ipLoacation.result.ad_info.nation + " " + ipLoacation.result.ad_info.city;
-    e = ipLoacation.result.ip
-    switch (ipLoacation.result.ad_info.nation) {
+    let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLocation.lon, ipLocation.lat);
+    let a = ipLocation.country == ipLocation.city ? ipLocation.country : ipLocation.country + " " + ipLocation.city;
+    e = ipLocation.query
+    switch (ipLocation.country) {
         case "日本":
             posdesc = "よろしく，一起去看樱花吗";
             break;
@@ -125,7 +126,6 @@ function showWelcome() {
             posdesc = "拾起一片枫叶赠予你";
             break;
         case "中国":
-            a = ipLoacation.result.ad_info.province + " " + ipLoacation.result.ad_info.city
             posdesc = "世界那么大，我想去看看";
             break;
         default:

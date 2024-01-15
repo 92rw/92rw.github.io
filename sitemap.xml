@@ -2,18 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://92rw.github.io/posts/677b2145.html</loc>
-    
-    <lastmod>2024-01-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://92rw.github.io/categories/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +13,7 @@
   <url>
     <loc>https://92rw.github.io/tags/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +22,7 @@
   <url>
     <loc>https://92rw.github.io/box/animation/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +31,7 @@
   <url>
     <loc>https://92rw.github.io/box/gallery/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +40,7 @@
   <url>
     <loc>https://92rw.github.io/box/nav/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +49,7 @@
   <url>
     <loc>https://92rw.github.io/life/games/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +58,7 @@
   <url>
     <loc>https://92rw.github.io/life/movies/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +67,7 @@
   <url>
     <loc>https://92rw.github.io/life/music/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +76,7 @@
   <url>
     <loc>https://92rw.github.io/personal/about/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +85,7 @@
   <url>
     <loc>https://92rw.github.io/personal/bb/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +94,7 @@
   <url>
     <loc>https://92rw.github.io/personal/love/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +103,7 @@
   <url>
     <loc>https://92rw.github.io/site/census/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,7 +112,7 @@
   <url>
     <loc>https://92rw.github.io/site/time/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -130,7 +121,7 @@
   <url>
     <loc>https://92rw.github.io/social/fcircle/index.html</loc>
     
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -138,6 +129,24 @@
   
   <url>
     <loc>https://92rw.github.io/social/link/index.html</loc>
+    
+    <lastmod>2024-01-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://92rw.github.io/posts/14ba35a0.html</loc>
+    
+    <lastmod>2024-01-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://92rw.github.io/posts/677b2145.html</loc>
     
     <lastmod>2024-01-03</lastmod>
     
@@ -265,7 +274,7 @@
 
   <url>
     <loc>https://92rw.github.io/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -273,35 +282,35 @@
   
   <url>
     <loc>https://92rw.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/tags/%E8%99%9A%E5%BA%A6%E6%97%B6%E9%97%B4/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -310,35 +319,35 @@
   
   <url>
     <loc>https://92rw.github.io/categories/Blog/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/categories/Life/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/categories/Scribble/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/categories/Algorithm/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://92rw.github.io/categories/Coding/</loc>
-    <lastmod>2024-01-03</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

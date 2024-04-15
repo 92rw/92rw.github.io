@@ -72,12 +72,24 @@ function scrollToTop() {
 
 /* 欢迎信息 start */
 //get请求
+// $.ajax({
+//     type: "get",
+//     url: 'https://static-resources.vercel.app/api/index/ip',//https://api.kxyr.top/api/ip
+//     success: function(e) {
+//     ipLocation = e
+// }
+// }),
 $.ajax({
     type: "get",
-    url: 'https://static-resources.vercel.app/api/index/ip',//https://api.kxyr.top/api/ip
+    url: "https://apis.map.qq.com/ws/location/v1/ip",
+    data: {
+        key: "QGHBZ-K7QKP-37IDO-L2HNC-WYIH6-O5BL4",
+        output: "jsonp"
+    },
+    dataType: "jsonp",
     success: function(e) {
-    ipLocation = e
-}
+        ipLocation = e
+    }
 }),
 window.onload = showWelcome,
     document.addEventListener("pjax:complete", showWelcome);
@@ -97,10 +109,14 @@ function getDistance(e, t, n, o) {
 }
 
 function showWelcome() {
-    let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLocation.lon, ipLocation.lat);
-    let a = ipLocation.country == ipLocation.city ? ipLocation.country : ipLocation.country + " " + ipLocation.city;
-    e = ipLocation.query
-    switch (ipLocation.country) {
+    // let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLocation.lon, ipLocation.lat);
+    // let a = ipLocation.country == ipLocation.city ? ipLocation.country : ipLocation.country + " " + ipLocation.city;
+    // e = ipLocation.query
+    // switch (ipLocation.country) {
+    let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLocation.result.location.lng, ipLocation.result.location.lat);
+    let a = ipLocation.result.ad_info.nation == ipLocation.result.ad_info.city ? ipLocation.result.ad_info.nation : ipLocation.result.ad_info.nation + " " + ipLocation.result.ad_info.city;
+    e = ipLocation.result.ip
+    switch (ipLocation.result.ad_info.nation) {
         case "日本":
             posdesc = "よろしく，一起去看樱花吗";
             break;

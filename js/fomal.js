@@ -72,82 +72,18 @@ function scrollToTop() {
 
 /* 欢迎信息 start */
 //get请求
-// $.ajax({
-//     type: "get",
-//     url: 'https://static-resources.vercel.app/api/index/ip',//https://api.kxyr.top/api/ip
-//     success: function(e) {
-//     ipLocation = e
-// }
-// }),
 $.ajax({
     type: "get",
-    url: "https://apis.map.qq.com/ws/location/v1/ip",
-    data: {
-        key: "QGHBZ-K7QKP-37IDO-L2HNC-WYIH6-O5BL4",
-        output: "jsonp"
-    },
-    dataType: "jsonp",
+    url: 'https://static-resources.vercel.app/api/index/ip',
     success: function(e) {
-        ipLocation = e
+        ipInfo = e
     }
 }),
+
 window.onload = showWelcome,
     document.addEventListener("pjax:complete", showWelcome);
 
-function getDistance(e, t, n, o) {
-    const {sin: a, cos: s, asin: i, PI: c, hypot: l} = Math;
-    let r = (e,t)=>(e *= c / 180,
-        {
-            x: s(t *= c / 180) * s(e),
-            y: s(t) * a(e),
-            z: a(t)
-        })
-        , d = r(e, t)
-        , u = r(n, o)
-        , b = 2 * i(l(d.x - u.x, d.y - u.y, d.z - u.z) / 2) * 6371;
-    return Math.round(b)
-}
-
 function showWelcome() {
-    // let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLocation.lon, ipLocation.lat);
-    // let a = ipLocation.country == ipLocation.city ? ipLocation.country : ipLocation.country + " " + ipLocation.city;
-    // e = ipLocation.query
-    // switch (ipLocation.country) {
-    let e, posdesc, o = getDistance(103.8831102, 1.3318817, ipLocation.result.location.lng, ipLocation.result.location.lat);
-    let a = ipLocation.result.ad_info.nation == ipLocation.result.ad_info.city ? ipLocation.result.ad_info.nation : ipLocation.result.ad_info.nation + " " + ipLocation.result.ad_info.city;
-    e = ipLocation.result.ip
-    switch (ipLocation.result.ad_info.nation) {
-        case "日本":
-            posdesc = "よろしく，一起去看樱花吗";
-            break;
-        case "美国":
-            posdesc = "Let us live in peace!";
-            break;
-        case "英国":
-            posdesc = "想同你一起夜乘伦敦眼";
-            break;
-        case "俄罗斯":
-            posdesc = "干了这瓶伏特加！";
-            break;
-        case "法国":
-            posdesc = "C'est La Vie";
-            break;
-        case "德国":
-            posdesc = "Die Zeit verging im Fluge.";
-            break;
-        case "澳大利亚":
-            posdesc = "一起去大堡礁吧！";
-            break;
-        case "加拿大":
-            posdesc = "拾起一片枫叶赠予你";
-            break;
-        case "中国":
-            posdesc = "世界那么大，我想去看看";
-            break;
-        default:
-            posdesc = "带我去你的国家逛逛吧。";
-            break;
-    }
 
     //根据本地时间切换欢迎语
     let timeChange;
@@ -160,9 +96,10 @@ function showWelcome() {
     else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！";
     else timeChange = "夜深了，早点休息，少熬夜。";
     try {
-        document.getElementById("welcome-info").innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--blue-custom)">${a}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--blue-custom)">${o}</span> 公里，当前的IP地址为： <span style="color:var(--blue-custom)">${e}</span>， ${posdesc}</b>`
+        document.getElementById("welcome-info").innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--blue-custom)">${ipInfo.location}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--blue-custom)">${ipInfo.distance}</span> 公里，当前的IP地址为： <span style="color:var(--blue-custom)">${ipInfo.query}</span>， ${ipInfo.posdesc}</b>`
     } catch (e) {
-        // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
+        document.getElementById("welcome-info").innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎到访本网站，${timeChange}希望您能发现感兴趣的内容</b>`
+        console.log("Pjax 获取 IP 信息失败🙄🙄🙄")
     }
 }
 

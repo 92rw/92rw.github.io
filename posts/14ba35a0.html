@@ -151,12 +151,10 @@
 <p><strong>质数：</strong> 质数是大于1且只能被1和自身整除的正整数。例如，2、3、5、7等都是质数。质数在数论中有着重要的地位，并涉及到诸多有趣的性质和研究领域。</p>
 <p><strong>斐波那契数列：</strong> 斐波那契数列是一个数学序列，其定义是从第三项开始，每一项都是前两项的和。形式上，斐波那契数列可以表示为：<code>F(n) = F(n−1) + F(n−2)</code>，其中 <code>F(0)=0, F(1)=1</code>。</p>
 <p>虽然在数学上它们没有直接的联系，但在一些编程和算法问题中，可能会出现同时涉及到质数和斐波那契数列的情况。例如，一些算法问题可能要求同时判断某个数是不是质数，同时它的斐波那契数列中的位置是否也是质数。这种联系通常是在特定问题背景下引入的，而不是数学本身的关系。</p>
-<h2 id="质数">质数</h2>
-<p>许多年前在 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-sg/%E7%B7%A8%E7%A8%8B%E9%9A%A8%E6%83%B3">编程随想</a> 的博客读到过文章 <a target="_blank" rel="noopener" href="https://program-think.blogspot.com/2011/12/prime-algorithm-1.html?m=1">求质数算法的 N 种境界- 试除法和初级筛法</a>，当时就感慨自己的思路不够开阔，作者在文章中分别给出了算法和数据结构的使用境界，总结如下：</p>
+<h2 id="质数"><a href="#质数" class="headerlink" title="质数"></a>质数</h2><p>许多年前在 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-sg/編程隨想">编程随想</a> 的博客读到过文章 <a target="_blank" rel="noopener" href="https://program-think.blogspot.com/2011/12/prime-algorithm-1.html?m=1">求质数算法的 N 种境界- 试除法和初级筛法</a>，当时就感慨自己的思路不够开阔，作者在文章中分别给出了算法和数据结构的使用境界，总结如下：</p>
 <p>一般人的思路是通过试除法来计算质数，然而筛法计算速度更为优越：</p>
 <ol>
-<li><strong>试除法：</strong>
-<ul>
+<li><strong>试除法：</strong><ul>
 <li>境界1：最简单的试除法，从2一直尝试到x-1，效率最差。</li>
 <li>境界2：优化为尝试到x/2，减少工作量。</li>
 <li>境界3：只尝试奇数，因为质因数除2外都是奇数。</li>
@@ -164,36 +162,31 @@
 <li>境界5：尝试小于√x的质数，以空间换时间，提高效率。</li>
 </ul>
 </li>
-<li><strong>埃拉托斯特尼筛法（Sieve of Eratosthenes）：</strong>
-<ul>
+<li><strong>埃拉托斯特尼筛法（Sieve of Eratosthenes）：</strong><ul>
 <li>基本思想是从小到大枚举每个数，将其所有的倍数标记为合数。通过不断筛去合数，剩下的即为质数。</li>
 <li>在第一次枚举时，标记所有的合数。</li>
 <li>在后续枚举中，如果当前数没有被标记，那么它就是质数，然后标记其所有的倍数。</li>
 <li></li>
 </ul>
 </li>
-<li><strong>筛法的优化考虑：</strong>
-<ul>
+<li><strong>筛法的优化考虑：</strong><ul>
 <li>如何确定质数的分布范围，涉及素数定理的应用。</li>
 <li>如何设计存储容器，从整型容器到按位存储的布尔型容器，以提高空间性能。</li>
 </ul>
 </li>
 </ol>
 <p>在数据结构的使用上，也分为多重境界：</p>
-<h4 id="境界1：整型容器">境界1：整型容器</h4>
-<ul>
+<h4 id="境界1：整型容器"><a href="#境界1：整型容器" class="headerlink" title="境界1：整型容器"></a>境界1：整型容器</h4><ul>
 <li><strong>设计：</strong> 使用整型数组，每个元素表示一个自然数，通过标记是否为质数。</li>
 <li><strong>特点：</strong> 简单直观，但浪费内存空间，可能导致频繁的内存分配和释放。</li>
 <li><strong>适用场景：</strong> 适用于小范围的质数筛选。</li>
 </ul>
-<h4 id="境界2：布尔型容器">境界2：布尔型容器</h4>
-<ul>
+<h4 id="境界2：布尔型容器"><a href="#境界2：布尔型容器" class="headerlink" title="境界2：布尔型容器"></a>境界2：布尔型容器</h4><ul>
 <li><strong>设计：</strong> 使用布尔型数组，每个元素表示一个自然数，通过标记是否为质数（true表示是质数，false表示是合数）。</li>
 <li><strong>特点：</strong> 减少了内存浪费，避免了频繁的内存分配和释放。</li>
 <li><strong>适用场景：</strong> 适用于中等范围的质数筛选，相比境界1更节省内存。</li>
 </ul>
-<h4 id="境界3：按位存储容器">境界3：按位存储容器</h4>
-<ul>
+<h4 id="境界3：按位存储容器"><a href="#境界3：按位存储容器" class="headerlink" title="境界3：按位存储容器"></a>境界3：按位存储容器</h4><ul>
 <li><strong>设计：</strong> 使用字节数组，每个字节存储多个自然数的质数信息，通过位运算标记是否为质数。</li>
 <li><strong>特点：</strong> 进一步减少了内存占用，提高了空间利用率，适用于大范围的质数筛选。</li>
 <li><strong>适用场景：</strong> 适用于大规模的质数筛选，具有更高的空间性能。</li>
@@ -205,13 +198,11 @@
 <li>境界3在内存占用上进一步优化，适用于处理大规模的问题。</li>
 </ul>
 <p>在实际应用中，选择合适的境界取决于问题规模和性能需求。随着问题规模的增加，通常会选择更高境界的容器以提高性能。</p>
-<h2 id="斐波那契数列">斐波那契数列</h2>
-<p>在开源电子书《Hello算法》的 <a target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_computational_complexity/iteration_and_recursion/#3_1">迭代与递归</a> 章节中，给出了递归实现斐波那契数列的代码</p>
+<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><p>在开源电子书《Hello算法》的 <a target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_computational_complexity/iteration_and_recursion/#3_1">迭代与递归</a> 章节中，给出了递归实现斐波那契数列的代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 斐波那契数列：递归 */</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fib</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="comment">// 终止条件 f(1) = 0, f(2) = 1</span></span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span> || n == <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> n - <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 递归调用 f(n) = f(n-1) + f(n-2)</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>);</span><br><span class="line">    <span class="comment">// 返回结果 f(n)</span></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然而质数计算一般不适合使用递归。递归是一种自调用的方式，适用于问题可以分解为相同类型的子问题的情况。然而，质数判定本质上是一个简单的判断问题，没有自然地分解为相同类型的子问题。</p>
 <p>质数判定通常采用迭代的方式，例如试除法或更高效的算法。递归可能会导致效率低下，因为它需要在每一层递归调用中保存状态，而这种方式可能会在处理大数时导致栈溢出或效率低下。</p>
-<h2 id="算法求解">算法求解</h2>
-<p>ChatGPT 对于算法题“判断某个数是不是质数，同时它的斐波那契数列中的位置是否也是质数” 给出的求解步骤是：</p>
+<h2 id="算法求解"><a href="#算法求解" class="headerlink" title="算法求解"></a>算法求解</h2><p>ChatGPT 对于算法题“判断某个数是不是质数，同时它的斐波那契数列中的位置是否也是质数” 给出的求解步骤是：</p>
 <ol>
 <li><strong>判断数是否是质数：</strong> 使用常见的质数判定方法，例如试除法或更高效的算法（如 Miller-Rabin 算法）。如果数是质数，进入下一步；否则，停止判断。</li>
 <li><strong>确定数在斐波那契数列中的位置：</strong> 计算斐波那契数列，找到该数在序列中的位置。可以使用迭代或递归的方式计算斐波那契数列。</li>
